@@ -1,0 +1,186 @@
+// vim: set ts=8 sw=8 :
+// vim: set filetype=asciidoc :
+= aucampia/reference/ws
+:toc:
+:numbered:
+:toclevels: 4
+:sectnumlevels: 5
+//:max-width: 97%
+
+== SOAP
+
+* link:http://en.wikipedia.org/wiki/SOAP[ Wikipedia ]
+* link:http://www.w3.org/TR/soap/[ W3C / SOAP Page ]
+* Version 1.1
+** link:http://www.w3.org/TR/2000/NOTE-SOAP-20000508/[ Simple Object Access Protocol (SOAP) 1.1 ]
++
+.XML Namespaces (xmlns) and Schemas Definitions (xsd)
+[cols="2,1,4,2", options="header"]
+|===
+|Description
+|Prefix
+|xmlns
+|xsd
+
+|Envelope
+|+SOAP-ENV+
+|+http://schemas.xmlsoap.org/soap/envelope/+
+|link:http://schemas.xmlsoap.org/soap/envelope/[ envelope.xsd ]
+
+|Encoding
+|+SOAP-ENC+
+|+http://schemas.xmlsoap.org/soap/encoding/+
+|link:http://schemas.xmlsoap.org/soap/encoding/[ encoding.xsd ]
+
+|===
+* Version 1.2
+** link:http://www.w3.org/TR/soap12-part0/[ SOAP Version 1.2 Part 0: Primer ]
+** link:http://www.w3.org/TR/soap12-part1/[ SOAP Version 1.2 Part 1: Messaging Framework ]
+** link:http://www.w3.org/TR/soap12-part2/[ SOAP Version 1.2 Part 2: Adjuncts ]
+** link:http://www.w3.org/TR/soap12-testcollection/[ SOAP Version 1.2 Specification Assertions and Test Collection ]
++
+.XML Namespaces (xmlns) and Schemas Definitions (xsd)
+[cols="2,1,4,2", options="header"]
+|===
+|Description
+|Prefix
+|xmlns
+|xsd
+
+|Envelope
+|+env+
+|+http://www.w3.org/2003/05/soap-envelope+
+|link:http://www.w3.org/2003/05/soap-envelope[ soap-envelope.xsd ]
+
+|Encoding
+|+enc+
+|+http://www.w3.org/2003/05/soap-encoding+
+|link:http://www.w3.org/2003/05/soap-encoding[ soap-encoding.xsd ]
+
+|RPC
+|+rpc+
+|+http://www.w3.org/2003/05/soap-rpc+
+|link:http://www.w3.org/2003/05/soap-rpc[ soap-rpc.xsd ]
+
+|===
+
+== WSDL
+
+* link:http://en.wikipedia.org/wiki/Web_Services_Description_Language[ Wikipedia ]
+* link:http://www.w3.org/2002/ws/desc/[ W3C / Web Services Description Working Group ]
+
+* Version 1.0
+** link:http://xml.coverpages.org/wsdl20000929.html[ Web Services Description Language (WSDL) 1.0 ]
+** link:http://schemas.xmlsoap.org/wsdl/soap12/soap12WSDL.htm[ WSDL Binding for SOAP 1.2 ]
++
+.XML Namespaces (xmlns) and Schemas Definitions (xsd)
+[cols="2,1,4,2", options="header"]
+|===
+|Description
+|Prefix
+|xmlns
+|xsd
+
+|WSDL
+|+wsdl+
+|+http://schemas.xmlsoap.org/wsdl/+
+|link:http://schemas.xmlsoap.org/wsdl/[ wsdl.xsd ]
+
+|SOAP 1.1 Binding
+|+soap+
+|+http://schemas.xmlsoap.org/wsdl/soap/+
+|link:http://schemas.xmlsoap.org/wsdl/soap/[ soap.xsd ]
+
+|HTTP Binding
+|+http+
+|+http://schemas.xmlsoap.org/wsdl/http/+
+|link:http://schemas.xmlsoap.org/wsdl/http/[ http.xsd ]
+
+|MIME Binding
+|+mime+
+|+http://schemas.xmlsoap.org/wsdl/mime/+
+|link:http://schemas.xmlsoap.org/wsdl/mime/[ mime.xsd ]
+|===
+
+* Version 1.1
+** link:http://www.w3.org/TR/wsdl[ Web Services Description Language (WSDL) 1.1 ]
+** link:http://www.w3.org/Submission/wsdl11soap12/[ WSDL 1.1 Binding Extension for SOAP 1.2 ]
++
+.XML Namespaces (xmlns) and Schemas Definitions (xsd)
+[cols="2,1,4,2", options="header"]
+|===
+|Description
+|Prefix
+|xmlns
+|xsd
+
+|WSDL
+|+wsdl+
+|+http://schemas.xmlsoap.org/wsdl/+
+|link:http://schemas.xmlsoap.org/wsdl/[ wsdl.xsd ]
+
+|SOAP 1.1 Binding
+|+soap+
+|+http://schemas.xmlsoap.org/wsdl/soap/+
+|link:http://schemas.xmlsoap.org/wsdl/soap/[ soap.xsd ]
+
+|SOAP 1.2 Binding
+|+wsoap12+
+|+http://schemas.xmlsoap.org/wsdl/soap12/wsdl11soap12.xsd+
+|link:http://schemas.xmlsoap.org/wsdl/soap12/wsdl11soap12.xsd[ wsdl11soap12.xsd ]
+
+|HTTP Binding
+|+http+
+|+http://schemas.xmlsoap.org/wsdl/http/+
+|link:http://schemas.xmlsoap.org/wsdl/http/[ http.xsd ]
+
+|MIME Binding
+|+mime+
+|+http://schemas.xmlsoap.org/wsdl/mime/+
+|link:http://schemas.xmlsoap.org/wsdl/mime/[ mime.xsd ]
+|===
+
+* Version 2.0
+** link:http://www.w3.org/TR/wsdl20-primer/[ Web Services Description Language (WSDL) Version 2.0 Part 0: Primer ]
+** link:http://www.w3.org/TR/wsdl20/[ Web Services Description Language (WSDL) Version 2.0 Part 1: Core Language ]
+** link:http://www.w3.org/TR/wsdl20-adjuncts/[ Web Services Description Language (WSDL) Version 2.0 Part 2: Adjuncts ]
++
+.XML Namespaces (xmlns) and Schemas Definitions (xsd)
+[cols="2,1,4,2", options="header"]
+|===
+
+|Description
+|Prefix
+|xmlns
+|xsd
+
+|WSDL
+|+wsdl+
+|+http://www.w3.org/ns/wsdl+
+|link:http://www.w3.org/2007/06/wsdl/wsdl20.xsd[ wsdl20.xsd ]
+
+|WSDL Instance
+|+wsdli+
+|+http://www.w3.org/ns/wsdl-instance+
+|link:http://www.w3.org/2007/06/wsdl/wsdl20-instance.xsd[ wsdl20-instance.xsd ]
+
+|WSDL Extentions
+|+wsdlx+
+|+http://www.w3.org/ns/wsdl-extensions+
+|link:http://www.w3.org/2002/ws/desc/ns/wsdl-extensions.xsd[ wsdl-extensions.xsd ]
+
+|SOAP Binding
+|+wsoap+
+|+http://www.w3.org/ns/wsdl/soap+
+|link:http://www.w3.org/2002/ws/desc/ns/soap.xsd[ soap.xsd ]
+
+|HTTP Binding
+|+whttp+
+|+http://www.w3.org/ns/wsdl/http+
+|link:http://www.w3.org/2002/ws/desc/ns/http.xsd[ http.xsd ]
+
+|RPC Binding
+|+wrpc+
+|+http://www.w3.org/2007/06/wsdl/rpc.xsd+
+|link:http://www.w3.org/2007/06/wsdl/rpc.xsd[ rpc.xsd ]
+|===

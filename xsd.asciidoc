@@ -1,0 +1,59 @@
+= aucampia/reference/xsd
+
+* link:http://www.w3.org/XML/Schema[ w3c / XML Schema ]
+** XML Schema (XSD 1.0)
+*** link:http://www.w3.org/TR/xmlschema-0/[ XML Schema Part 0: Primer Second Edition ]
+*** link:http://www.w3.org/TR/xmlschema-1/[ XML Schema Part 1: Structures Second Edition ]
+*** link:http://www.w3.org/TR/xmlschema-2/[ XML Schema Part 2: Datatypes Second Edition ]
++
+.XML Namespaces (xmlns), Schemas Definitions (xsd) and Document Type Definitions (dtd)
+[cols="2,1,4,2", options="header"]
+|===
+|Description
+|Prefix
+|xmlns
+|xsd/dtd
+
+|XSD
+|xs
+|+http://www.w3.org/2001/XMLSchema+
+a|
+* link:http://www.w3.org/2001/XMLSchema.dtd[ XMLSchema.dtd ]
+* link:http://www.w3.org/2001/datatypes.dtd[ datatypes.dtd ]
+* link:http://www.w3.org/2001/XMLSchema.xsd[ XMLSchema.xsd ]
+
+|XML Schema Instance
+|xsi
+|+http://www.w3.org/2001/XMLSchema-instance+
+|link:http://www.w3.org/2001/XMLSchema-instance[ XMLSchema-instance ]
+
+|===
+
+** XSD 1.1
+*** link:http://www.w3.org/TR/xmlschema11-1/[ W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures ]
+*** link:http://www.w3.org/TR/xmlschema11-2/[ W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes ]
+*** link:http://www.w3.org/2009/XMLSchema/[ files ]
++
+.XML Namespaces (xmlns), Schemas Definitions (xsd) and Document Type Definitions (dtd)
+[cols="2,1,4,2", options="header"]
+|===
+|Description
+|Prefix
+|xmlns
+|xsd/dtd
+
+|XSD
+|xs
+|+http://www.w3.org/2001/XMLSchema+
+a|
+* link:http://www.w3.org/2009/XMLSchema/XMLSchema.dtd[ XMLSchema.dtd ]
+* link:http://www.w3.org/2009/XMLSchema/datatypes.dtd[ datatypes.dtd ]
+* link:http://www.w3.org/2009/XMLSchema/XMLSchema.xsd[ XMLSchema.xsd ]
+* link:http://www.w3.org/2009/XMLSchema/datatypes.xsd[ datatypes.xsd ]
+
+|XML Schema Instance
+|xsi
+|+http://www.w3.org/2001/XMLSchema-instance+
+|link:http://www.w3.org/2001/XMLSchema-instance[ XMLSchema-instance ]
+
+|===

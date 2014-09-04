@@ -1,4 +1,3 @@
-reference
-=========
+== aucampia / reference
 
 Personal reference guide

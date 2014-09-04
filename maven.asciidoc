@@ -1,0 +1,32 @@
+= aucampia / reference / maven
+
+
+* Plugin Help
++
+----
+mvn help:describe -Dplugin=dependency -Dfull
+mvn help:describe -Dplugin=maven-dependency-plugin -Dfull
+mvn help:describe -Dplugin=org.apache.maven.plugins:maven-dependency-plugin:2.8 -Dfull
+mvn help:describe -Dplugin=compiler 
+----
+
+* Dependency Tree ...
++
+----
+mvn dependency:tree
+mvn org.apache.maven.plugins:maven-dependency-plugin:2.8:tree
+----
+
+* Built In Plugins ...
++
+site:http://maven.apache.org/plugins/[ Available Plugins ]
+
+* Activate `-Xlink:all`
+
+
+
+----
+-DskipTests
+mvn -DskipTests -X -e install >out 2>&1
+vn -DskipTests -X -e install 2>&1 | view -
+----

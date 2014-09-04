@@ -1,0 +1,49 @@
+== ...
+
+== Class Relationships
+
+=== Composition
+
+["plantuml"]
+----
+A *-right- B : composed of
+----
+
+* `A` is composed of `B`
+* `A` has a `B`
+* `B` can exist independantly of `A`
+
+=== Aggregation
+
+["plantuml"]
+----
+A o-right- B : aggregation of
+----
+
+* `A` is an aggregation of `B`
+* `A` has a `B`
+* `B` cannot exist independantly of `A`
+
+=== Extention / Generalization / Specialization
+
+["plantuml"]
+----
+A <|-left- B : extention of
+----
+
+* `B` extends `A`
+* `B` is a specialization of `A`
+* `A` is a generalization of `B`
+
+=== Interface Implementation
+
+["plantuml"]
+----
+interface A
+A <|.left. B : implementation of
+----
+
+* `B` implements `A`
+* `B` is an implementation of `A`
+* `A` is an interface of `B`
+

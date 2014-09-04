@@ -1,0 +1,11 @@
+
+
+----
+# list branches:
+hg branches -c
+
+# list tags:
+hg tags
+
+hg diff -r 1.4.3 -r default
+----

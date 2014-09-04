@@ -1,0 +1,46 @@
+= ...
+
+
+* link:http://sdedit.sourceforge.net/[ sdedit: Quick Sequence Diagram Editor ]
+** link:http://sourceforge.net/projects/sdedit/[ sf.net ]
+* link:http://plantuml.sourceforge.net/[ PlantUML]
+** link:http://sourceforge.net/projects/plantuml/[ sf.net ]
+* link:http://weidagang.github.io/text-diagram/[ Text Diagram ]
+** link:https://github.com/weidagang/text-diagram[ github.com ]
+* link:http://www.graphviz.org/[ Graphviz ]
+** link:https://github.com/ellson/graphviz/[ github/graphviz ]
+** link:https://github.com/ellson/webdot/[ github/webdot ]
+* link:http://ditaa.sourceforge.net/[ ditaa: DIagrams Through Ascii Art ]
+** link:http://sourceforge.net/projects/ditaa/[ sf.net ]
+* link:http://metauml.sourceforge.net/old/index.html[ MetaUML ]
+** link:http://sourceforge.net/projects/metauml/[ sf.net ]
+* link:https://github.com/abstratt/textuml[ textuml ]
+** ... github.com
+* link:http://yuml.me/[ yUML ]
+** ... closed source
+* link:http://mathcs.holycross.edu/~ahwang/epix/ePiX.html[ ePiX ]
+* link:http://asymptote.sourceforge.net/[ Asymptote ]
+** link:http://sourceforge.net/projects/asymptote/[ sf.net ]
+* link:http://raphaeljs.com/[]
+* link:http://processingjs.org/[]
+* link:https://www.websequencediagrams.com/[]
+* link:http://asciiflow.com/[]
+* link:http://www.ckwnc.com/[]
+* link:http://www.umlgraph.org/[]
+* link:https://code.google.com/p/modsl/[]
+* link:http://sourceforge.net/projects/useocl/[]
+* link:
+
+
+----
+http://macroexpand.org/doku.php?id=articles:uml-sequence-diagram-dsl-txl:start
+http://www.diagrammr.com/
+http://astreo.ii.uam.es/~jlara/metaDepth/Documentation.html
+http://modeling-languages.com/uml-tools/
+http://modeling-languages.com/umple-LANGUAGE-model-oriented-programming/
+http://www.stateforge.com/
+http://blockdiag.com/en/seqdiag/index.html
+http://modeling-languages.com/js-sequence-diagrams-a-text-to-uml-sequence-diagrams-with-js/
+https://seeduml.com/I4gvQ
+http://www.planttext.com/
+----

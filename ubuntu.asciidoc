@@ -1,0 +1,28 @@
+
+
+----
+dpkg -l
+
+dpkg -L snmp
+
+dpkg -S /usr/lib/x86_64-linux-gnu/libsnmp.so.30
+
+apt-cache search snmp
+apt-file search libsnmp.so
+apt-get install libsnmp-dev
+
+http://www.cyberciti.biz/howto/question/linux/dpkg-cheat-sheet.php
+
+
+
+apt-get install libsnmp-dev
+apt-get install libmysqlclient-dev
+apt-get install libexpat1-dev
+apt-get install libpcre3-dev
+apt-get install libboost-all-dev
+apt-get install libreoffice
+
+apt-get --purge remove libboost-date-time1.54.0:amd64
+apt-get --purge remove libboost-system1.54.0:amd64
+
+----

@@ -1,0 +1,40 @@
+= aucampia/reference/asiidoc
+
+* link:http://www.methods.co.nz/asciidoc/[ methods.co.nz / asciidoc ]
+** link:http://www.methods.co.nz/asciidoc/userguide.html[ AsciiDoc User Guide ]
+* link:http://asciidoctor.org/[ asciidoctor.org ]
+** link:http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[ AsciiDoc Syntax Quick Reference ]
+** link:http://asciidoctor.org/docs/asciidoc-writers-guide/[ AsciiDoc Writer’s Guide ]
+** link:http://asciidoctor.org/docs/user-manual/[ Asciidoctor User Manual ]
+** link:http://asciidoctor.org/docs/asciidoctor-diagram[ Asciidoctor Diagram ]
+** link:http://asciidoctor.org/docs/asciidoc-recommended-practices/[ AsciiDoc Style Guide and Recommended Practices ]
+
+----
+:toc:
+:numbered:
+:toclevels: 4
+:sectnumlevels: 5
+----
+
+----
+Life's Mysteries
+================
+:author: Hu Nose
+:doctype: book
+:toc:
+:icons:
+:data-uri:
+:lang: en
+:encoding: iso-8859-1
+----
+
+
+----
+gem install asciidoctor
+gem install asciidoctor-diagram
+gem install asciidoctor-backends
+----
+
+----
+-a data-uri
+----
