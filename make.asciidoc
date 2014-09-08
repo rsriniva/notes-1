@@ -1,0 +1,9 @@
+= aucampia/reference/make
+
+----
+.DEFAULT_GOAL
+
+.PHONY: bar
+
+http://locklessinc.com/articles/makefile_tricks/
+----

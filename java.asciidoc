@@ -1,0 +1,17 @@
+= aucampia/reference/java
+
+== WS-* stuff
+
+
+* link:http://stackoverflow.com/questions/11586512/why-people-dont-do-wsdl-first[ stackoverflow / Why people don't do WSDL-first? ]
+* link:https://www.java.net/node/663727[ java.net / forum / Java-first or WSDL-first? ]
+
+=== WSDL to Java
+
+
+* link:http://cxf.apache.org/docs/wsdl-to-java.html[ Apache CXF / WSDL to Java ]
+* link:http://cxf.apache.org/docs/maven-cxf-codegen-plugin-wsdl-to-java.html[ Apache CXF / Maven cxf-codegen-plugin (WSDL to Java) ]
+* link:http://axis.apache.org/axis/java/reference.html#WSDL2Java_Reference[ Apache Axis / WSDL2Java ]
+* link:http://axis.apache.org/axis/java/maven/wsdl2java/[ Apache Axis / maven-wsdl2java-plugin ]
+
+

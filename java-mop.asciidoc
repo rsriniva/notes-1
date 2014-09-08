@@ -1,0 +1,22 @@
+== aucampia/reference/java-mop
+
+
+* link:http://mop.fusesource.org/[ fusesorce.org / MOP ]
+
+//
+
+----
+mkdir -p ~/software/sources/fusesource.org/mop/
+( cd ~/software/sources/fusesource.org/mop/; wget -c http://mop.fusesource.org/repo/snapshot/org/fusesource/mop/mop/1.0-SNAPSHOT/mop-1.0-SNAPSHOT-bin.tar.gz )
+mkdir -p ~/software/installations/
+rm -f ~/software/installations/mop
+gtar -zxvf ~/software/sources/fusesource.org/mop/mop-1.0-SNAPSHOT-bin.tar.gz -C ~/software/installations/
+ln -s ~/software/installations/mop-1.0-SNAPSHOT ~/software/installations/mop
+sed -n '/## software:installations:mop:PATH$/p' ~/.bashrc
+sed -i '/## software:installations:mop:PATH$/d' ~/.bashrc
+echo 'export PATH="${HOME}/software/installations/mop/bin:${PATH}" ## software:installations:mop:PATH' >> ~/.bashrc
+----
+
+----
+mop run org.apache.cxf:cxf-tools-validator:3.0.1 org.apache.cxf.tools.validator.WSDLValidator
+----
