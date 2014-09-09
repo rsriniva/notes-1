@@ -1,0 +1,14 @@
+= aucampia/reference/sar
+
+== ksar
+//
+
+----
+mkdir -p ~/software/sources/sf.net/ksar/
+wget -c http://sourceforge.net/projects/ksar/files/ksar/5.0.6/kSar-5.0.6.zip/download -O ~/software/sources/sf.net/ksar/kSar-5.0.6.zip
+mkdir -p ~/software/installations/
+rm -f ~/software/installations/ksar
+unzip -o -d ~/software/installations/ ~/software/sources/sf.net/ksar/kSar-5.0.6.zip
+ln -s ~/software/installations/kSar-5.0.6 ~/software/installations/ksar
+bash ~/software/installations/ksar/run.sh
+----

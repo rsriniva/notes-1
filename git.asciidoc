@@ -1,0 +1,20 @@
+= aucampia/reference/git
+
+
+----
+git clone <url> [<optional_destination>]
+
+# Add new file
+git add <file>
+
+# Send changes 
+git commit -m "message comes here ..."
+git push
+
+# check changes
+git diff
+git status
+
+git pull
+
+----

@@ -1,0 +1,18 @@
+= ...
+
+----
+https://www.dnspod.com/docs/index.html
+http://stackoverflow.com/questions/12883428/how-to-parse-restructuredtext-in-python
+http://docutils.sourceforge.net/docs/dev/hacking.html#parsing-the-document
+
+https://docs.python.org/3/library/io.html
+https://docs.python.org/3/library/functions.html#open
+https://docs.python.org/3/library/optparse.html
+http://stackoverflow.com/questions/16549332/python-3-how-to-specify-stdin-encoding
+
+https://docs.python.org/3/library/argparse.html#module-argparse
+https://docs.python.org/3/howto/argparse.html
+https://docs.python.org/3/library/argparse.html#argparse.Namespace
+
+https://docs.python.org/3/library/xml.dom.minidom.html
+----

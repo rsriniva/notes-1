@@ -1,3 +1,6 @@
 
 http://www.gnu.org/licenses/license-list.html
 
+http://unlicense.org/
+http://www.gnu.org/licenses/gpl-howto.html
+http://choosealicense.com/
