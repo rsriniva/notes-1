@@ -28,4 +28,8 @@ git remote rm github
 git remote -v
 
 git remote set-url origin https://github.com/aucampia/notes.git https://github.com/aucampia/reference.git
+
+git config -l
+
+git push -u origin --all
 ----
