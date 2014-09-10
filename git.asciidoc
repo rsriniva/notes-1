@@ -20,3 +20,12 @@ git push
 # Fetch upstream changes
 git pull
 ----
+
+----
+git remote rename origin github
+git remote add origin ?newurl?
+git remote rm github
+git remote -v
+
+git remote set-url origin https://github.com/aucampia/notes.git https://github.com/aucampia/reference.git
+----
