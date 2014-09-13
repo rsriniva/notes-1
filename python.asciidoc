@@ -16,3 +16,7 @@ https://docs.python.org/3/library/argparse.html#argparse.Namespace
 
 https://docs.python.org/3/library/xml.dom.minidom.html
 ----
+
+----
+Magic Methods: https://docs.python.org/3/reference/datamodel.html
+----
