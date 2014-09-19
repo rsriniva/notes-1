@@ -7,3 +7,14 @@
 
 http://locklessinc.com/articles/makefile_tricks/
 ----
+
+----
+%.html: %.asciidoc
+	$(ASCIIDOCTOR) -b html5 -o $(@) $(<)
+
+%.docbook45.xml: %.asciidoc
+	$(ASCIIDOCTOR) -b docbook45 -o $(@) $(<)
+
+%.docbook45.pdf: %.docbook45.xml
+	$(A2X) -v $(<)
+----

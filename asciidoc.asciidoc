@@ -30,11 +30,40 @@ Life's Mysteries
 
 
 ----
-gem install asciidoctor
-gem install asciidoctor-diagram
-gem install asciidoctor-backends
+-a data-uri
 ----
 
 ----
--a data-uri
+gem install asciidoctor
+gem install asciidoctor-diagram
+gem install asciidoctor-backends
+
+hg clone https://bitbucket.org/aucampia/blockdiag
+cd blockdiag
+python3.3 setup.py install --user
+pip install --user nwdiag
+pip install --user seqdiag
+pip install --user actdiag
+----
+
+----
+#!/usr/bin/env ruby
+
+require 'rubygems' if RUBY_VERSION < '1.9'
+require 'asciidoctor'
+require 'asciidoctor/cli'
+require 'asciidoctor-diagram'
+
+
+invoker = Asciidoctor::Cli::Invoker.new ARGV
+GC.start
+invoker.invoke!
+exit invoker.code
+----
+
+----
+# ruby gems
+export PATH="$( shopt -s nullglob; dirs=( ${HOME}/.gem/ruby/*/bin/ ); IFS=:; echo -n "${dirs[*]}"; test ${#dirs[@]} -gt 0 && echo "${PATH:+:}" )${PATH}"
+# .local
+export PATH="${HOME}/.local/bin/${PATH:+:}${PATH}"
 ----

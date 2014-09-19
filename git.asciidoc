@@ -4,12 +4,12 @@
 ----
 git clone <url> [<optional_destination>]
 
-# Add new file
-git add <file>
-
 # check changes
 git diff
 git status
+
+# Add file to commit
+git add <file>
 
 # Commit changes locally
 git commit -m "message comes here ..."
@@ -32,4 +32,31 @@ git remote set-url origin https://github.com/aucampia/notes.git https://github.c
 git config -l
 
 git push -u origin --all
+----
+
+----
+git filter-branch -f --env-filter "GIT_AUTHOR_NAME='Iwan Aucamp'; GIT_AUTHOR_EMAIL='aucampia@gmail.com'; GIT_COMMITTER_NAME='Iwan Aucamp'; GIT_COMMITTER_EMAIL='aucampia@gmail.com';" HEAD
+
+
+git config user.email "aucampia@gmail.com"
+git config user.name "Iwan Aucamp"
+
+git pull origin master
+
+
+git remote rm origin
+git remote add origin ...
+git remote set-url origin ...
+----
+
+----
+* https://help.github.com/articles/create-a-repo
+* http://git.or.cz/course/svn.html
+* http://www.bioinf.uni-freiburg.de/~mmann/HowTo/automake.html#exampleProg
+* http://www.openismus.com/documents/linux/building_libraries/building_libraries
+* http://www.openismus.com/documents/linux/automake/automake
+* https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+* http://www.methods.co.nz/asciidoc/userguide.html
+* http://powerman.name/doc/asciidoc
+* http://git.or.cz/course/svn.html
 ----
