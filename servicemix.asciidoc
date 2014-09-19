@@ -1,0 +1,62 @@
+= reference / servicemix
+
+----
+servicemix_version=5.1.2
+mkdir -p ~/software/sources/apache.org/servicemix/
+mkdir -p ~/software/installations/
+( cd ~/software/sources/apache.org/servicemix/ && wget -c http://apache.mirror.ac.za/servicemix/servicemix-${servicemix_version%%.*}/${servicemix_version}/apache-servicemix-${servicemix_version}.zip )
+
+rm -r ~/software/installations/apache-servicemix-${servicemix_version}
+unzip ~/software/sources/apache.org/servicemix/apache-servicemix-${servicemix_version}.zip -d ~/software/installations/
+rm ~/software/installations/apache-servicemix
+ln -s ~/software/installations/apache-servicemix-${servicemix_version} ~/software/installations/apache-servicemix
+----
+
+----
+~/software/installations/apache-servicemix/bin/start
+~/software/installations/apache-servicemix/bin/client
+~/software/installations/apache-servicemix/bin/stop
+
+ps -ef | grep 'java.*org.apache.karaf'
+ps -ef | grep 'java.*org.apache.karaf' | gawk '{ print $2 }' | xargs kill
+ps -ef | grep 'java.*org.apache.karaf'
+
+
+----
+
+----
+cat ~/software/installations/apache-servicemix/data/log/servicemix.log{.2,.1,} | view -
+
+tail -F ~/software/installations/apache-servicemix/data/log/servicemix.log
+tail -F ~/software/installations/apache-servicemix/data/karaf.out
+tail -F ~/software/installations/apache-servicemix/data/log/wrapper.log
+
+egrep -ih -e 'org.eclipse.jetty.*STARt' ~/software/installations/apache-servicemix/data/log/servicemix.log{.2,.1,}
+egrep -ie groovy ~/software/installations/apache-servicemix/data/log/servicemix.log{.2,.1,}
+egrep -e ERROR -e WARN ~/software/installations/apache-servicemix/data/log/servicemix.log{.2,.1,}
+egrep -e ERROR -e WARN -e '[Ee][Xx][Cc][Ee][Pp][Tt][Ii][Oo][Nn]' ~/software/installations/apache-servicemix/data/log/servicemix.log{.2,.1,}
+grep -e MyPackageServiceInterface -e MyPackageService -e MyResource ~/software/installations/apache-servicemix/data/log/servicemix.log{.2,.1,}
+grep -e ActivitiProducer -e ExchangeUtils ~/software/installations/apache-servicemix/data/log/servicemix.log{.2,.1,}
+----
+
+----
+features:install -v webconsole
+osgi:list -s -t 0
+osgi:info --force org.apache.karaf.webconsole.console/2.3.4
+config:list "(service.pid=org.apache.activemq.webconsole)"
+osgi:headers --force org.apache.karaf.webconsole.console/2.3.4
+
+osgi:ls --force org.apache.karaf.webconsole.console/2.3.4
+osgi:ls -u --force org.apache.karaf.webconsole.console/2.3.4
+
+# s/ (\(.*\))/\/\1/gc
+
+# org.apache.karaf.webconsole.branding/2.3.4
+# org.apache.karaf.webconsole.console/2.3.4
+# org.apache.karaf.webconsole.admin/2.3.4
+# org.apache.karaf.webconsole.features/2.3.4
+# org.apache.karaf.webconsole.gogo/2.3.4
+# org.apache.felix.webconsole.plugins.event/1.1.0
+
+http://karaf:karaf@localhost:8181/system/console/bundles
+----
