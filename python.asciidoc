@@ -19,4 +19,8 @@ https://docs.python.org/3/library/xml.dom.minidom.html
 
 ----
 Magic Methods: https://docs.python.org/3/reference/datamodel.html
+ModuleType: https://docs.python.org/3/library/types.html
+
+https://docs.python.org/3/library/string.html
+https://docs.python.org/3/library/stdtypes.html
 ----
