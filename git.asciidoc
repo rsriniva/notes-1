@@ -64,3 +64,13 @@ git remote set-url origin ...
 ----
 find . -mindepth 1 -maxdepth 1 -type d | xargs -t -I{} git -C {} status
 ----
+
+----
+git mergetool --tool=vimdiff
+----
+
+----
+
+bfg --delete-files 'stuffs.asciidoc'
+git push origin --force --all
+----
