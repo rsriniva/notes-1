@@ -33,3 +33,7 @@ git config -l
 
 git push -u origin --all
 ----
+
+----
+find . -mindepth 1 -maxdepth 1 -type d | xargs -t -I{} git -C {} status
+----
