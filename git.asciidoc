@@ -73,4 +73,7 @@ git mergetool --tool=vimdiff
 
 bfg --delete-files 'stuffs.asciidoc'
 git push origin --force --all
+
+git reflog expire --expire=now --all
+git gc --aggressive --prune=now
 ----
