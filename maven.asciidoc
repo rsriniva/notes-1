@@ -8,6 +8,7 @@ mvn help:describe -Dplugin=dependency -Dfull
 mvn help:describe -Dplugin=maven-dependency-plugin -Dfull
 mvn help:describe -Dplugin=org.apache.maven.plugins:maven-dependency-plugin:2.8 -Dfull
 mvn help:describe -Dplugin=compiler 
+mvn help:describe -Dcmd=compile -Dfull
 ----
 
 * Dependency Tree ...
@@ -23,14 +24,40 @@ site:http://maven.apache.org/plugins/[ Available Plugins ]
 
 * Activate `-Xlink:all`
 
+----
+# phases
+
+https://maven.apache.org/ref/3.2.3/maven-core/lifecycles.html
+
+----
 
 
 ----
 -DskipTests
 mvn -DskipTests -X -e install >out 2>&1
-vn -DskipTests -X -e install 2>&1 | view -
+mvn -DskipTests -X -e install 2>&1 | view -
+mvn -DskipTests install
 ----
 
 ----
 [ERROR] Unknown lifecycle phase "xjc". You must specify a valid lifecycle phase or a goal in the format <plugin-prefix>:<goal> or <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>. Available lifecycle phases are: validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pre-site, site, post-site, site-deploy. -> [Help 1]
+----
+
+----
+mvn-3.0 -Djava.util.logging.config.file=$HOME/.m2/logging.properties install
+----
+
+----
+mvn help:describe -Dplugin=versions -Dfull
+mvn versions:display-plugin-updates
+mvn help:describe -Dplugin=wagon -Dfull
+mvn versions:update-child-modules
+----
+
+----
+mvn help:effective-pom 
+----
+
+----
+https://maven.apache.org/guides/mini/guide-encryption.html
 ----

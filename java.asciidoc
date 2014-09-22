@@ -20,4 +20,22 @@ http://cxf.apache.org/docs/tools.html
 wsimport
 ----
 
+== jdb
 
+----
+http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/jdb.html
+
+jdb -attach 10878
+
+stop in com.github.aucampia.jsw.test.logic.comp.TestServiceLogic.postConstruct
+stop in org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.fillInputData
+stop at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon:877
+stop in org.apache.maven.wagon.providers.http.AbstractHttpClientWagon.execute
+stop at org.apache.maven.wagon.providers.http.AbstractHttpClientWagon:700
+
+run
+cont
+step
+next
+
+----

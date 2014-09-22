@@ -24,3 +24,8 @@ ModuleType: https://docs.python.org/3/library/types.html
 https://docs.python.org/3/library/string.html
 https://docs.python.org/3/library/stdtypes.html
 ----
+
+----
+import datetime
+( datetime.datetime.strptime( "15:00:00", "%H:%M:%S" ) - datetime.datetime.strptime( "07:30:00", "%H:%M:%S" ) ).seconds / 60 / 60
+----
