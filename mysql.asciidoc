@@ -1,0 +1,12 @@
+
+
+----
+echo 'SHOW TABLES;' | mysql -u root -pussdgw information_schema
+
+echo 'SELECT * FROM USER_PRIVILEGES;' | mysql -u root -pussdgw information_schema
+echo 'SELECT * FROM user;' | mysql -u root -pussdgw mysql
+echo 'SELECT * FROM user\G' | mysql -u root -pussdgw mysql
+echo 'SHOW CREATE TABLE user\G' | mysql -u root -pussdgw mysql
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root';
+----
