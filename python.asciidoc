@@ -24,3 +24,10 @@ ModuleType: https://docs.python.org/3/library/types.html
 https://docs.python.org/3/library/string.html
 https://docs.python.org/3/library/stdtypes.html
 ----
+
+* lambda:
+** link:https://docs.python.org/3/reference/expressions.html[]
+
+* dict:
+** link:https://docs.python.org/3/tutorial/datastructures.html[]
+** link:https://docs.python.org/3/library/stdtypes.html[]
