@@ -36,3 +36,32 @@ import datetime
 * dict:
 ** link:https://docs.python.org/3/tutorial/datastructures.html[]
 ** link:https://docs.python.org/3/library/stdtypes.html[]
+
+== Python
+
+* link:https://docs.python.org/[ docs.python.org ]
+** link:https://docs.python.org/devguide/[ Python Developer's Guide ]
+*** link:https://docs.python.org/devguide/documenting.html[ Documenting Python ]
+** link:https://docs.python.org/3.4/[ Python 3.4 documentation ]
+*** link:https://docs.python.org/3.4/tutorial/modules.html[ modules ]
+*** link:https://docs.python.org/3.4/reference/compound_stmts.html#function[ Function definitions ]
+*** link:https://docs.python.org/3.4/library/functions.html#staticmethod[ @staticmethod ]
+*** link:https://docs.python.org/3.4/library/functions.html#classmethod[ @classmethod ]
+*** link:https://docs.python.org/3.4/library/os.path.html[ os.path ]
+*** link:https://docs.python.org/3.4/library/urllib.html[ urllib ]
+**** link:https://docs.python.org/3.4/library/urllib.request.html[ request ]
+**** link:https://docs.python.org/3.4/library/urllib.parse.html[ parse ]
+*** link:https://docs.python.org/3.4/glossary.html#term-decorator[ decorator ]
+* link:https://wiki.python.org/moin/Python2orPython3[ Should I use Python 2 or Python 3 for my development activity? ]
+* link:http://legacy.python.org/dev/peps/pep-0008/[ PEP 8 -- Style Guide for Python Code ]
+* link:http://legacy.python.org/dev/peps/pep-0257/[ PEP 257 -- Docstring Conventions ]
+* link:http://stackoverflow.com/[ stackoverflow ]
+** link:http://stackoverflow.com/questions/2852283/python-naming-a-module-that-has-a-two-word-name[ python: naming a module that has a two-word name ]
+** link:http://stackoverflow.com/questions/2713874/python-package-name-conventions[ Python package name conventions ]
+** link:http://stackoverflow.com/questions/448271/what-is-init-py-for[ What is __init__.py for? ]
+** link:http://stackoverflow.com/questions/635419/code-documentation-for-python[ code documentation for python ]
+
+
+=== Examples
+
+* link:https://github.com/lxml/lxml[ The lxml XML toolkit for Python ]

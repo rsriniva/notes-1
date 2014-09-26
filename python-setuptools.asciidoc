@@ -1,0 +1,23 @@
+= aucampia / notes / python-setuptools
+
+* link:https://pypi.python.org/pypi?%3Aaction=list_classifiers[ PyPI / list_classifiers ]
+* link:https://pypi.python.org/pypi/setuptools/5.1[ PyPI / setuptools 5.1  ]
+* https://bitbucket.org/pypa/[ PyPA @ Bitbucket ]
+** https://bitbucket.org/pypa/setuptools[ setuptools ]
+* link:https://github.com/pypa[ Python Packaging Authority @ GitHub ]
+** https://github.com/pypa/sampleproject/tree/master/sample [ sampleproject ]
+* link:https://pythonhosted.org/setuptools/index.html[ Setuptools Documentation @ pythonhosted.org ]
+* link:https://python-packaging-user-guide.readthedocs.org/[ Python Packaging User Guide ]
+* link:http://bashelton.com/2009/04/setuptools-tutorial/[ setuptools Tutorial ]
+* link:https://github.com/wichert/setuptools-git[ chert / setuptools-git ]
+* link:http://reinout.vanrees.org/weblog/2010/01/06/zest-releaser-entry-points.html[ Using setuptools entry points ]
+* link:http://docs.pylonsproject.org/projects/pylons-webframework/en/latest/advanced_pylons/entry_points_and_plugins.html[ Using Entry Points to Write Plugins ]
+* link:http://stackoverflow.com/[ stackoverflow ]
+** link:http://stackoverflow.com/questions/6344076/differences-between-distribute-distutils-setuptools-and-distutils2[ Differences between distribute, distutils, setuptools and distutils2? ]
+** link:http://stackoverflow.com/questions/774824/explain-python-entry-points[ Explain Python entry points? ]
+* link:http://legacy.python.org/dev/peps/pep-0314/[  PEP 314 -- Metadata for Python Software Packages v1.1  ]
+** keywords ...
+
+== Reference:
+
+find_packages:: link:https://bitbucket.org/pypa/setuptools/src/61addbf5fb68ea33bd02aaaa6285ea17063c345c/setuptools/__init__.py?at=default#cl-35[ setuptools / setuptools / __init__.py / line #35 ]
