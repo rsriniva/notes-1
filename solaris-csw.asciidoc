@@ -1,0 +1,29 @@
+
+
+----
+
+pkgutil -y -i \
+	libmpfr \
+	subversion \
+	vim \
+	vimrt \
+	pm_string_approx \
+	binutils \
+	textutils \
+	patchutils \
+	findutils \
+	fileutils \
+	diffutils \
+	perl \
+	ggrep \
+	gmake \
+	gsed \
+	libmpc
+
+/etc/opt/csw/pkgutil.conf:
+
+use_md5=true
+use_gpg=false
+mirror=http://mirror.concurrent.co.za/blastwave/2010-09-22/unstable
+
+----

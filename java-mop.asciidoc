@@ -12,9 +12,14 @@ mkdir -p ~/software/installations/
 rm -f ~/software/installations/mop
 gtar -zxvf ~/software/sources/fusesource.org/mop/mop-1.0-SNAPSHOT-bin.tar.gz -C ~/software/installations/
 ln -s ~/software/installations/mop-1.0-SNAPSHOT ~/software/installations/mop
-sed -n '/## software:installations:mop:PATH$/p' ~/.bashrc
-sed -i '/## software:installations:mop:PATH$/d' ~/.bashrc
-echo 'export PATH="${HOME}/software/installations/mop/bin:${PATH}" ## software:installations:mop:PATH' >> ~/.bashrc
+
+ln -s ~/software/installations/mop/bin/mop ~/.local/bin/
+----
+
+----
+#sed -n '/## software:installations:mop:PATH$/p' ~/.bashrc
+#sed -i '/## software:installations:mop:PATH$/d' ~/.bashrc
+#echo 'export PATH="${HOME}/software/installations/mop/bin:${PATH}" ## software:installations:mop:PATH' >> ~/.bashrc
 ----
 
 ----

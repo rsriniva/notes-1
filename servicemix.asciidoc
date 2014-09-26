@@ -60,3 +60,21 @@ osgi:ls -u --force org.apache.karaf.webconsole.console/2.3.4
 
 http://karaf:karaf@localhost:8181/system/console/bundles
 ----
+
+----
+maven urls:
+
+https://ops4j1.jira.com/wiki/display/paxurl/Mvn+Protocol
+----
+
+----
+log:get
+log:set TRACE
+log:get
+log:set INFO
+log:get
+----
+
+----
+netstat -tanp | grep `pgrep -f org.apache.karaf.main.Main`
+----

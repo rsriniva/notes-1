@@ -1,0 +1,22 @@
+
+
+----
+
+( gtar -tvf jre-7u51-fcs-bin-b13-solaris-sparc-19_dec_2013.tar ; gtar -tvf jre-7u51-fcs-bin-b13-solaris-sparcv9-19_dec_2013.tar ) | gawk '{ print $6 }' | sort | uniq -c | sort -k1n
+( gtar -tvf jre-7u51-fcs-bin-b13-solaris-sparc-19_dec_2013.tar ; gtar -tvf jre-7u51-fcs-bin-b13-solaris-sparcv9-19_dec_2013.tar )
+
+mkdir -p /opt/jre/
+gtar -C /opt/jre/ -xvf jre-7u51-fcs-bin-b13-solaris-sparc-19_dec_2013.tar
+gtar -C /opt/jre/ -xvf jre-7u51-fcs-bin-b13-solaris-sparcv9-19_dec_2013.tar
+( cd /opt/jre/ && ln -s jre1.7.0_51 latest )
+( cd /opt/ && ln -s jre/latest java )
+
+
+/etc/profile:
+PATH=/opt/java/bin:$PATH
+export PATH
+
+JAVA_HOME=/opt/java
+export JAVA_HOME
+
+----

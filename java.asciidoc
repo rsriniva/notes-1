@@ -38,4 +38,8 @@ cont
 step
 next
 
+
+print httpConfiguration.all
+print this.getHttpConfiguration()
+print this.authenticationInfo.getPassword()
 ----

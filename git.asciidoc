@@ -41,6 +41,9 @@ git filter-branch -f --env-filter "GIT_AUTHOR_NAME='Iwan Aucamp'; GIT_AUTHOR_EMA
 git config user.email "aucampia@gmail.com"
 git config user.name "Iwan Aucamp"
 
+git config user.email "iwan.aucamp@concurrent.co.za"
+git config user.name "Iwan Aucamp @ Concurrent Systems"
+
 git pull origin master
 
 
@@ -63,6 +66,8 @@ git remote set-url origin ...
 
 ----
 find . -mindepth 1 -maxdepth 1 -type d | xargs -t -I{} git -C {} status
+find . -mindepth 1 -maxdepth 1 -type d | xargs -t -I{} git -C {} pull
+find . -mindepth 1 -maxdepth 1 -type d | xargs -t -I{} git -C {} push
 ----
 
 ----

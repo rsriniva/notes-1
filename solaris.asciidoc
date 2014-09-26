@@ -1,0 +1,59 @@
+
+
+
+----
+ps -eo uid,pid,ppid,c,stime,size,rss,tty,time,cmd | grep java
+ps -eo zone,vsz,rss,uid,pid,ppid,stime,tty,time,args | sort -k 2 -n
+ps -eo zone,vsz,rss,uid,pid,ppid,stime,tty,time,args | sort -k 3 -n
+ps -eo zone,vsz,rss,uid,pid,ppid,stime,tty,time,args | sort -k 9 -n
+
+ps -eo zone,vsz,rss,uid,pid,ppid,stime,tty,time,args
+
+
+ps -eo zone,vsz,rss,uid,pid,ppid,stime,tty,time,args | awk '{ if ( ( NR == 1 )  || ($5 == "'`pgrep -x a4ld`'" ) ) { print $0 } }'
+
+
+ps -eo zone,vsz,rss,uid,pid,ppid,stime,tty,time,args | awk 'BEGIN{ sz=0; } { sz+= $3 } END{ print sz }'
+ps -eo zone,vsz,rss,user,pid,ppid,stime,tty,time,args | awk 'BEGIN{ sz=0; } { sz+= $3 } END{ print sz }'
+
+ps -eo uid,pid,ppid,c,stime,size,rss,tty,time,cmd
+
+
+ps -eo zone,vsz,rss,user,pid,ppid,stime,tty,time,args | awk 'BEGIN{ sz=0; } { sz+= $3 } END{ print sz }'
+
+ps -ef | head
+ps -eo zone,vsz,rss,user,pid,ppid,stime,tty,time,args | head
+
+ps -eo zone,vsz,rss,user,group,pid,ppid,stime,tty,time,args
+ps -eo zone,vsz,rss,user,group,pid,ppid,stime,tty,time,args | grep 10143
+
+ps -eo zone,vsz,rss,user,group,pid,ppid,stime,tty,time,args | grep 13638
+
+ps -eo zone,vsz,rss,user,group,pid,ppid,stime,tty,time,args | grep 13638
+
+ps -eo uid,pid,ppid,group,pgid,c,stime,tty,time,cmd
+
+
+ps -eo uid,pid,ppid,group,pgid,c,stime,tty,time,args -p 5470
+
+
+ps -eo pid,ppid,args
+
+ps -eo uid,pid,ppid,c,stime,tty,time,comm | head
+ps -eo uid,pid,ppid,c,stime,tty,time,args | head
+ps -eo uid,vsz,rss,pid,ppid,c,stime,tty,time,args | grep "svccore -c" | grep -v grep
+
+
+ps -eo vsz,rss,user,pid,ppid,c,stime,tty,time,args | sort -k2 -nr | head
+ps -eo vsz,rss,user,pid,ppid,c,stime,tty,time,args | sort -k1 -nr | head
+
+# sort by ram usage - highest goes top
+ps -eo rss,vsz,user,pid,ppid,c,stime,tty,time,args | sort -k1nr
+# sort by virtual memory usage - highest goes top
+ps -eo rss,vsz,user,pid,ppid,c,stime,tty,time,args | sort -k2nr
+# sum virtual and ram usage
+ps -eo rss,vsz,user,pid,ppid,c,stime,tty,time,args | sed 1d | gawk 'BEGIN { tvsz=0; trss=0; } { tvsz += $1; trss += $2; } END { printf("tvsz=%s\n", tvsz); printf("trss=%s\n", trss); }'
+
+
+~cs/forall 'ps -eo rss,vsz,ppid,stime,args | sed -n -e "1p" -e "/svccore -c/p" | grep -v sed | gawk '"'"'BEGIN { OFS="," } { if ( NR != 1 ) { $1=($1/1024)" MB"; $2 = ($2/1024)" MB"; } else { $1=$1 } print }'"'"''
+----

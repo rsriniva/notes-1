@@ -56,8 +56,55 @@ mvn versions:update-child-modules
 
 ----
 mvn help:effective-pom 
+mvn-3.0 help:effective-pom -Doutput=effective-pom.xml
 ----
 
 ----
 https://maven.apache.org/guides/mini/guide-encryption.html
+----
+
+----
+
+----
+
+----
+## DONT HAVE ${MAVEN_HOME} SET
+## DONT HAVE ${M2_HOME} SET
+maven_version=3.0.5
+maven_version=3.2.3
+maven_version=3.1.1
+
+mkdir -p ~/software/sources/apache.org/maven/
+mkdir -p ~/software/installations/
+( cd ~/software/sources/apache.org/maven/ && wget -c http://apache.mirror.ac.za/maven/maven-${maven_version%%.*}/${maven_version}/binaries/apache-maven-${maven_version}-bin.zip )
+
+rm -r ~/software/installations/apache-maven-${maven_version}
+unzip ~/software/sources/apache.org/maven/apache-maven-${maven_version}-bin.zip -d ~/software/installations/
+rm ~/software/installations/apache-maven
+ln -s ~/software/installations/apache-maven-${maven_version} ~/software/installations/apache-maven
+
+mkdir -p ~/.local/bin/
+ln -s ~/software/installations/apache-maven/bin/mvn ~/.local/bin/mvn
+ln -s ~/software/installations/apache-maven/bin/mvnDebug ~/.local/bin/mvnDebug
+----
+
+----
+mvn --encrypt-master-password ... | sed -e '1i<settingsSecurity>' -e 's,.*,\t<master>&</master>,g' -e '$a</settingsSecurity>' > ~/.m2/settings-security.xml
+mvn --encrypt-password ...
+----
+
+----
+    <scm>
+        <connection>scm:git:git@gitlab.com:concurrent-systems-pcc/ssim-api.git</connection>
+        <developerConnection>scm:git@gitlab.com:concurrent-systems-pcc/ssim-api.git</developerConnection>
+        <url>https://gitlab.com/concurrent-systems-pcc/ssim-api</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>ssh-warehouse.concurrent.co.za-teams-pasterisk</id>
+            <url>scp://warehouse.concurrent.co.za/var/opt/webdav/warehouse.concurrent.co.za/teams/pasterisk/maven/</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
 ----
