@@ -1,0 +1,13 @@
+= aucampia / notes / rst
+
+reStructuredText
+
+* link:http://docutils.sourceforge.net/rst.html[ reStructuredText ]
+** link:http://docutils.sourceforge.net/docs/user/rst/quickstart.html[ A ReStructuredText Primer ]
+** link:http://docutils.sourceforge.net/docs/user/rst/quickref.html[ Quick reStructuredText ]
+** link:http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt[  The reStructuredText_ Cheat Sheet: Syntax Reminders ]
+** link:http://docutils.sourceforge.net/docs/ref/rst/introduction.html[ An Introduction to reStructuredText ]
+** link:http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html[ reStructuredText Markup Specification ]
+** link:http://docutils.sourceforge.net/docs/ref/rst/directives.html[ reStructuredText Directives ]
+** link:http://docutils.sourceforge.net/docs/ref/rst/roles.html[ reStructuredText Interpreted Text Roles ]
+

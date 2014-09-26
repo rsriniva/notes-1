@@ -1,0 +1,23 @@
+
+
+----
+lshw
+lshw -class disk -businfo
+blkid
+cat /proc/partitions
+fdisk -l 
+hwinfo --disk
+cat /proc/scsi/scsi
+lsblk -a -o NAME,MAJ:MIN,RM,SIZE,RO,TYPE,SCHED,WWN
+smartctl -i /dev/sda
+hdparm -i /dev/sda
+ls -ld /sys/block/sd*
+
+----
+
+----
+
+xwininfo
+xdpyinfo
+lsscsi
+----
