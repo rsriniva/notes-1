@@ -68,6 +68,21 @@ git remote set-url origin ...
 find . -mindepth 1 -maxdepth 1 -type d | xargs -t -I{} git -C {} status
 find . -mindepth 1 -maxdepth 1 -type d | xargs -t -I{} git -C {} pull
 find . -mindepth 1 -maxdepth 1 -type d | xargs -t -I{} git -C {} push
+
+find . -name .git -printf '%h\0' | xargs -0 -t -I{} git -C {} status
+find . -name .git -printf '%h\0' | xargs -0 -t -I{} git -C {} push
+
+ls -d ~/projects/{github,gitlab}*/aucampia/*/.git | sed 's,/\.git$,,g' | tr '\n' '\000' | xargs -0 -t -I{} git -C {} status
+ls -d ~/projects/{github,gitlab}*/aucampia/*/.git | sed 's,/\.git$,,g' | tr '\n' '\000' | xargs -0 -t -I{} git -C {} pull
+ls -d ~/projects/{github,gitlab}*/aucampia/*/.git | sed 's,/\.git$,,g' | tr '\n' '\000' | xargs -0 -t -I{} git -C {} remote -v
+
+ls -d ~/projects/{github,gitlab}*/aucampia/*/.git | sed 's,/\.git$,,g' | tr '\n' '\000' | xargs -0 -n1 bash -c 'origin=$( git -C "${1}" remote -v | egrep "origin\\s.*(push)" | gawk "{ print \$2 }" | sed 's/\.git$//g' | sed -e "s/\([^@]\+\)@\([^:]\+\):\(.*\)/\1@aucampia.\2:\3.git/g" -e "s,https://\([^/]\+\)/\([^/]\+\)/\(.*\),git@aucampia.\1:\2/\3.git,g" ); echo git -C "${1}" remote set-url origin "${origin}"' /dev/null
+
+ls -d ~/projects/gitlab*/concurrent*/*/.git | sed 's,/\.git$,,g' | tr '\n' '\000' | xargs -0 -t -I{} git -C {} status
+ls -d ~/projects/gitlab*/concurrent*/*/.git | sed 's,/\.git$,,g' | tr '\n' '\000' | xargs -0 -t -I{} git -C {} pull
+ls -d ~/projects/gitlab*/concurrent*/*/.git | sed 's,/\.git$,,g' | tr '\n' '\000' | xargs -0 -t -I{} git -C {} remote -v
+
+ls -d ~/projects/gitlab*/concurrent*/*/.git | sed 's,/\.git$,,g' | tr '\n' '\000' | xargs -0 -n1 bash -c 'origin=$( git -C "${1}" remote -v | egrep "origin\\s.*(push)" | gawk "{ print \$2 }" | sed 's/\.git$//g' | sed -e "s/\([^@]\+\)@\([^:]\+\):\(.*\)/\1@concurrent.\2:\3.git/g" -e "s,https://\([^/]\+\)/\([^/]\+\)/\(.*\),git@concurrent.\1:\2/\3.git,g" ); echo git -C "${1}" remote set-url origin "${origin}"' /dev/null
 ----
 
 ----

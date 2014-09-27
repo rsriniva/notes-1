@@ -1,6 +1,11 @@
+= notes / vim
 
 ----
 // vim: set ts=8 sw=8 :
 // vim: set filetype=asciidoc :
 # vim: filetype=make:
+----
+
+----
+find . -name '.*.sw?'
 ----
