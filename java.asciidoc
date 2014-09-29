@@ -43,3 +43,24 @@ print httpConfiguration.all
 print this.getHttpConfiguration()
 print this.authenticationInfo.getPassword()
 ----
+
+
+== ...
+
+----
+jdk_version=7u67-linux-x64
+mkdir -p ~/software/sources/oracle.com/jdk/
+mkdir -p ~/software/installations/
+( cd ~/software/sources/oracle.com/jdk/ && wget -c http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-${jdk_version}.tar.gz )
+
+gtar -zxvf ~/software/sources/oracle.com/jdk/jdk-${jdk_version}.tar.gz -C ~/software/installations/
+rm ~/software/installations/jdk
+ln -s ~/software/installations/$( echo "${jdk_version}" | sed 's/^\([^u]\+\)u\([^-]\+\).*$/jdk1.\1.0_\2/g' ) ~/software/installations/jdk
+
+sed -n -e '/## software:installations:jdk:.*$/p' ~/.bashrc
+sed -i -e '/## software:installations:jdk:.*$/d' ~/.bashrc
+echo 'export JAVA_HOME="${HOME}/software/installations/jdk" ## software:installations:jdk:JAVA_HOME' >> ~/.bashrc
+echo 'export JAVAC="${JAVA_HOME}/bin/javac" ## software:installations:jdk:JAVAC' >> ~/.bashrc
+echo 'export PATH="${JAVA_HOME}/bin${PATH:+:}:${PATH}" ## software:installations:jdk:PATH' >> ~/.bashrc
+echo 'export MANPATH="${JAVA_HOME}/man${MANPATH:+:}:${MANPATH}" ## software:installations:jdk:MANPATH' >> ~/.bashrc
+----
