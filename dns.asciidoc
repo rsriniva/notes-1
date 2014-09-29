@@ -1,12 +1,20 @@
 = aucampia / notes / dns
 
-== Providers
+== Hosting
 
 link:https://dns.he.net/[ Hurricane Electric Hosted DNS ]
-link:
+link:http://dnspod.com/[ DNSPod ]
 
-== Free Domains
+== Domain Names
 
 link:http://www.dot.tk[ Dot TK ]
 link:http://www.freenom.com/[ Freenom ]
 
+
+----
+
+a.dnspod.com
+b.dnspod.com
+c.dnspod.com
+
+----
