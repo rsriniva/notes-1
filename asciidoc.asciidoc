@@ -1,4 +1,4 @@
-= aucampia/reference/asiidoc
+= aucampia/notes/asiidoc
 
 * link:http://www.methods.co.nz/asciidoc/[ methods.co.nz / asciidoc ]
 ** link:http://www.methods.co.nz/asciidoc/userguide.html[ AsciiDoc User Guide ]

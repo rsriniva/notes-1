@@ -1,4 +1,4 @@
-= aucampia/reference/make
+= aucampia/notes/make
 
 ----
 .DEFAULT_GOAL

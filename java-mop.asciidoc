@@ -1,4 +1,4 @@
-= aucampia/reference/java-mop
+= aucampia/notes/java-mop
 
 
 * link:http://mop.fusesource.org/[ fusesorce.org / MOP ]

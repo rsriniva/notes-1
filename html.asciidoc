@@ -1,4 +1,4 @@
-= aucampia/reference/html
+= aucampia/notes/html
 
 == xhtml
 

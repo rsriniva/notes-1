@@ -1,4 +1,4 @@
-= aucampia/reference/java
+= aucampia/notes/java
 
 == WS-* stuff
 

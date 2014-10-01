@@ -1,4 +1,4 @@
-= aucampia / reference / maven
+= aucampia / notes / maven
 
 
 * Plugin Help
