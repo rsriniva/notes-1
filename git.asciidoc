@@ -1,4 +1,4 @@
-= aucampia/reference/git
+= aucampia/notes/git
 
 
 ----
@@ -27,7 +27,7 @@ git remote add origin ?newurl?
 git remote rm github
 git remote -v
 
-git remote set-url origin https://github.com/aucampia/notes.git https://github.com/aucampia/reference.git
+git remote set-url origin https://github.com/aucampia/notes.git https://github.com/aucampia/notes.git
 
 git config -l
 

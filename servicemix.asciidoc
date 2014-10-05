@@ -1,4 +1,4 @@
-= reference / servicemix
+= aucampia / notes / servicemix
 
 ----
 servicemix_version=5.1.2

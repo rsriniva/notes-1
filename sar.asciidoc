@@ -1,4 +1,4 @@
-= aucampia/reference/sar
+= aucampia/notes/sar
 
 == ksar
 //

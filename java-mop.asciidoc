@@ -1,4 +1,4 @@
-= aucampia/reference/java-mop
+= aucampia/notes/java-mop
 
 
 * link:http://mop.fusesource.org/[ fusesorce.org / MOP ]
@@ -12,16 +12,18 @@ mkdir -p ~/software/installations/
 rm -f ~/software/installations/mop
 gtar -zxvf ~/software/sources/fusesource.org/mop/mop-1.0-SNAPSHOT-bin.tar.gz -C ~/software/installations/
 ln -s ~/software/installations/mop-1.0-SNAPSHOT ~/software/installations/mop
-
 ln -s ~/software/installations/mop/bin/mop ~/.local/bin/
 ----
 
 ----
-#sed -n '/## software:installations:mop:PATH$/p' ~/.bashrc
-#sed -i '/## software:installations:mop:PATH$/d' ~/.bashrc
-#echo 'export PATH="${HOME}/software/installations/mop/bin:${PATH}" ## software:installations:mop:PATH' >> ~/.bashrc
+sed -n -e '/## software:installations:local-prefix:.*$/p' ~/.bashrc
+sed -i -e '/## software:installations:local-prefix:.*$/d' ~/.bashrc
+echo 'export PATH="${HOME}/.local/bin${PATH:+:}${PATH}" ## software:installations:local-prefix:PATH' >> ~/.bashrc
+echo 'export MANPATH="${HOME}/.local/man${MANPATH:+:}${MANPATH}" ## software:installations:local-prefix:MANPATH' >> ~/.bashrc
 ----
 
 ----
+## Example usage:
 mop run org.apache.cxf:cxf-tools-validator:3.0.1 org.apache.cxf.tools.validator.WSDLValidator
+CLASSPATH=`mop classpath org.apache.cxf:cxf-tools-wsdlto-databinding-jaxb:2.7.12`:`mop classpath org.apache.cxf:cxf-tools-wsdlto-frontend-jaxws:2.7.12` java org.apache.cxf.tools.wsdlto.WSDLToJava -help
 ----

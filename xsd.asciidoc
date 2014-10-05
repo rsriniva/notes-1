@@ -1,4 +1,4 @@
-= aucampia/reference/xsd
+= aucampia/notes/xsd
 
 * link:http://www.w3.org/XML/Schema[ w3c / XML Schema ]
 ** XML Schema (XSD 1.0)

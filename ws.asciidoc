@@ -1,6 +1,6 @@
 // vim: set ts=8 sw=8 :
 // vim: set filetype=asciidoc :
-= aucampia/reference/ws
+= aucampia/notes/ws
 :toc:
 :numbered:
 :toclevels: 4
