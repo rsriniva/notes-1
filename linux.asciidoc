@@ -21,3 +21,7 @@ xwininfo
 xdpyinfo
 lsscsi
 ----
+
+----
+dmidecode -t bios -t baseboard
+----

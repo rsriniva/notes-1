@@ -1,0 +1,8 @@
+iptables -L
+iptables-save
+
+
+----
+http://wiki.centos.org/HowTos/Network/IPTables
+http://inai.de/links/iptables/
+----
