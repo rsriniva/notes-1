@@ -29,3 +29,7 @@ dirs=755
 exec=755
 files=644
 ----
+
+----
+dmidecode -t bios -t baseboard
+----

@@ -1,0 +1,47 @@
+
+
+----
+yum update
+
+yum list | grep man
+
+
+yum install man man-pages
+yum install ruby ruby-devel ruby-docs
+yum install vim-enhanced
+----
+
+----
+/etc/yum.repos.d/
+enabled = 1
+
+http://wiki.centos.org/AdditionalResources/Repositories
+https://fedoraproject.org/wiki/EPEL
+wget http://fedora.mirror.ac.za/epel/6/i386/epel-release-6-8.noarch.rpm
+----
+
+----
+systemctl list-unit-files | cat
+----
+
+----
+yum install httpd mod_ssl mod_php
+systemctl enable httpd.service
+systemctl start httpd.service
+systemctl stop httpd.service
+systemctl restart httpd.service
+systemctl is-active httpd.service
+----
+
+
+----
+yum install git
+----
+
+----
+yum install firewalld iptables-services iptables iptables-utils
+yum install firewalld iptables-services iptables iptables-utils firewall-config
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/sec-Using_Firewalls.html
+----
+
+

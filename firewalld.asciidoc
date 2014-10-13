@@ -1,0 +1,8 @@
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/sec-Using_Firewalls.html
+
+
+----
+systemctl start firewalld
+systemctl is-active firewalld.service
+firewall-cmd --state
+----
