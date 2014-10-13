@@ -1,0 +1,41 @@
+= aucampia / notes / karaf
+
+----
+karaf_version=2.3.7
+mkdir -p ~/software/sources/apache.org/karaf/
+mkdir -p ~/software/installations/
+( cd ~/software/sources/apache.org/karaf/ && wget -c http://archive.apache.org/dist/karaf/${karaf_version}/apache-karaf-${karaf_version}.tar.gz )
+
+rm -r ~/software/installations/apache-karaf-${karaf_version}
+tar -zxvf ~/software/sources/apache.org/karaf/apache-karaf-${karaf_version}.tar.gz -C ~/software/installations/
+rm ~/software/installations/apache-karaf
+ln -s ~/software/installations/apache-karaf-${karaf_version} ~/software/installations/apache-karaf
+----
+
+----
+## Client password is karaf
+~/software/installations/apache-karaf/bin/start
+~/software/installations/apache-karaf/bin/client
+~/software/installations/apache-karaf/bin/stop
+----
+
+
+----
+# Kill Karaf
+ps -ef | grep 'java.*org.apache.karaf.main.Main'
+ps -ef | grep 'java.*org.apache.karaf.main.Main' | gawk '{ print $2 }' | xargs kill
+ps -ef | grep 'java.*org.apache.karaf.main.Main'
+
+# Kill Karaf
+ps -fp `pgrep -f org.apache.karaf.main.Main`
+pkill -f org.apache.karaf.main.Main
+ps -fp `pgrep -f org.apache.karaf.main.Main`
+----
+
+----
+cat ~/software/installations/apache-karaf/data/log/karaf.log{.2,.1,} | view -
+
+tail -F ~/software/installations/apache-karaf/data/log/karaf.log
+tail -F ~/software/installations/apache-karaf/data/karaf.out
+tail -F ~/software/installations/apache-karaf/data/log/wrapper.log
+----

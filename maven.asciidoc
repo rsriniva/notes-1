@@ -108,3 +108,46 @@ mvn --encrypt-password ...
         </repository>
     </distributionManagement>
 ----
+
+----
+mvn scm:validate
+----
+
+
+----
+https://stackoverflow.com/questions/14013644/hosting-a-maven-repository-on-github
+https://bintray.com/
+----
+
+----
+https://repository.apache.org/content/repositories/snapshots
+https://repository.apache.org/content/repositories/snapshots/org/apache/httpcomponents/httpclient-osgi/4.3.6-SNAPSHOT/
+----
+
+
+----
+## https://maven.apache.org/maven-release/maven-release-plugin/
+## https://maven.apache.org/maven-release/maven-release-plugin/
+mvn -DdryRun=true release:prepare
+mvn -DdryRun=true release:prepare-with-pom
+mvn -DdryRun=true release:prepare-with-pom
+
+mvn release:prepare
+mvn release:prepare-with-pom
+
+4.3.5
+
+mvn release:perform
+mvn -DdryRun=true release:perform
+
+mvn scm:tag
+----
+
+----
+## https://maven.apache.org/scm/maven-scm-plugin/
+----
+
+----
+https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference
+----
+

@@ -21,3 +21,11 @@ xwininfo
 xdpyinfo
 lsscsi
 ----
+
+----
+find target/dependencies/apache-servicemix-5.1.2/ -type f -printf '%p:%m\n'
+find target/dependencies/apache-servicemix-5.1.2/ -type f -printf '%p:%m\n' | sed 's/^\(.*\):\([^:]\+\)$/\2/g' | sort | uniq -c
+dirs=755
+exec=755
+files=644
+----

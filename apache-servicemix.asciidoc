@@ -13,15 +13,23 @@ ln -s ~/software/installations/apache-servicemix-${servicemix_version} ~/softwar
 ----
 
 ----
+## Client password is karaf
 ~/software/installations/apache-servicemix/bin/start
 ~/software/installations/apache-servicemix/bin/client
 ~/software/installations/apache-servicemix/bin/stop
-
-ps -ef | grep 'java.*org.apache.karaf'
-ps -ef | grep 'java.*org.apache.karaf' | gawk '{ print $2 }' | xargs kill
-ps -ef | grep 'java.*org.apache.karaf'
+----
 
 
+----
+# Kill ServiceMix
+ps -ef | grep 'java.*org.apache.karaf.main.Main'
+ps -ef | grep 'java.*org.apache.karaf.main.Main' | gawk '{ print $2 }' | xargs kill
+ps -ef | grep 'java.*org.apache.karaf.main.Main'
+
+# Kill ServiceMix
+ps -fp `pgrep -f org.apache.karaf.main.Main`
+pkill -f org.apache.karaf.main.Main
+ps -fp `pgrep -f org.apache.karaf.main.Main`
 ----
 
 ----
@@ -77,4 +85,41 @@ log:get
 
 ----
 netstat -tanp | grep `pgrep -f org.apache.karaf.main.Main`
+----
+
+----
+## In ~/.ssh/config
+
+## karaf
+
+Host karaf.localhost
+	User karaf
+	Hostname localhost
+	Port 8101
+----
+
+----
+## Install RSA Public Key:
+~/software/installations/apache-servicemix/etc/keys.properties
+----
+
+----
+ssh -p 8101 karaf@localhost
+----
+
+----
+https://karaf.apache.org/manual/latest-2.2.x/developers-guide/custom-distribution.html
+https://servicemix.apache.org/docs/6.x/developers-guide/custom-distribution.html
+https://karaf.apache.org/manual/latest/developers-guide/custom-distribution.html
+grokbase.com/t/servicemix/dev/13bekcadp9/more-info-on-creating-custom-distros-on-top-of-servicemix
+http://grokbase.com/t/servicemix/users/121y0zc0ay/unable-to-find-activemq-feature-when-trying-to-build-custom-servicemix-distribution
+http://servicemix.396122.n5.nabble.com/Creating-a-servicemix-redistributable-td5717358.html
+----
+
+----
+http://karaf.apache.org/manual/latest/users-guide/provisioning.html
+http://karaf.apache.org/manual/latest/users-guide/kar.html
+
+https://karaf.apache.org/manual/latest-2.3.x/users-guide/kar.html
+https://karaf.apache.org/manual/latest-2.3.x/users-guide/provisioning.html
 ----

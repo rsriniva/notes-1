@@ -67,3 +67,9 @@ export PATH="$( shopt -s nullglob; dirs=( ${HOME}/.gem/ruby/*/bin/ ); IFS=:; ech
 # .local
 export PATH="${HOME}/.local/bin/${PATH:+:}${PATH}"
 ----
+
+
+----
+
+
+----

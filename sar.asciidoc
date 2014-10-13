@@ -12,3 +12,14 @@ unzip -o -d ~/software/installations/ ~/software/sources/sf.net/ksar/kSar-5.0.6.
 ln -s ~/software/installations/kSar-5.0.6 ~/software/installations/ksar
 bash ~/software/installations/ksar/run.sh
 ----
+
+
+----
+http://www.freebsd.org/cgi/man.cgi?query=sar&sektion=1&apropos=0&manpath=SunOS+5.10
+http://www.freebsd.org/cgi/man.cgi?query=sar&sektion=1M&apropos=0&manpath=SunOS+5.10
+----
+
+----
+for f in sa??; do cat "${f}" | ssh root@clove 'cat - > /tmp/saxx && TZ='Africa/Douala' sar -A -f /tmp/saxx' > "${f}.sar.p"; done;
+sed -i 's/clove/HXC3C/g' sa??.sar.p
+----

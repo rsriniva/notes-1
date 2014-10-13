@@ -1,0 +1,6 @@
+
+
+
+mop jar org.beanshell:bsh-core:2.0b4
+mop jar org.beanshell:bsh:2.0b5
+http://mvnrepository.com/artifact/org.beanshell

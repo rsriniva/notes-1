@@ -57,3 +57,47 @@ ps -eo rss,vsz,user,pid,ppid,c,stime,tty,time,args | sed 1d | gawk 'BEGIN { tvsz
 
 ~cs/forall 'ps -eo rss,vsz,ppid,stime,args | sed -n -e "1p" -e "/svccore -c/p" | grep -v sed | gawk '"'"'BEGIN { OFS="," } { if ( NR != 1 ) { $1=($1/1024)" MB"; $2 = ($2/1024)" MB"; } else { $1=$1 } print }'"'"''
 ----
+
+----
+
+SVR4 pkg
+
+dladm show-dev
+dladm show-link
+dladm show-dev
+dladm show-link
+
+
+dladm show-dev
+dladm show-link
+----
+
+
+----
+https://gist.githubusercontent.com/pyr/4023715/raw/95f5588f00c1dc07afddb8615f4736baf3f9ebcb/tcpdrop.c
+
+root@pcc-demo:~ [0] za/cs/csmysql/prod
+# netstat -an | grep 10011
+127.0.0.1.37704      127.0.0.1.10011      49152      0 49152      0 CLOSE_WAIT
+
+root@pcc-demo:~ [0] za/cs/csmysql/prod
+# ./tcpdrop 127.0.0.1 37704 127.0.0.1 10011
+127.0.0.1:37704 <-> 127.0.0.1:10011: dropped
+root@pcc-demo:~ [0] za/cs/csmysql/prod
+----
+
+----
+LD_PRELOAD=libmtmalloc.so
+----
+
+
+kstat -p | grep cpu_info
+kstat -p cpu_info
+
+
+dladm show-dev
+dladm show-link
+netstat -f inet -P tcp  -an | grep 1001.
+netstat -rn
+
+traceroute 10.67.32.34

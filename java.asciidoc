@@ -64,3 +64,10 @@ echo 'export JAVAC="${JAVA_HOME}/bin/javac" ## software:installations:jdk:JAVAC'
 echo 'export PATH="${JAVA_HOME}/bin${PATH:+:}${PATH}" ## software:installations:jdk:PATH' >> ~/.bashrc
 echo 'export MANPATH="${JAVA_HOME}/man${MANPATH:+:}${MANPATH}" ## software:installations:jdk:MANPATH' >> ~/.bashrc
 ----
+
+
+----
+jps -l
+jinfo 17430
+rm -f heap.bin && jmap -dump:format=b,file=heap.bin 20465 && jhat heap.bin 
+----

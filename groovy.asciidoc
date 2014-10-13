@@ -1,0 +1,17 @@
+= aucampia/notes/groovy
+
+
+----
+groovy_version=2.3.7
+mkdir -p ~/software/sources/codehaus.org/groovy/
+mkdir -p ~/software/installations/
+( cd ~/software/sources/codehaus.org/groovy/ && wget -c http://dl.bintray.com/groovy/maven/groovy-binary-${groovy_version}.zip )
+
+rm -r ~/software/installations/groovy-${groovy_version}
+unzip ~/software/sources/codehaus.org/groovy/groovy-binary-${groovy_version}.zip -d ~/software/installations/
+rm ~/software/installations/groovy
+ln -s ~/software/installations/groovy-${groovy_version} ~/software/installations/groovy
+
+rm ~/.local/bin/groovysh
+ln -s ~/software/installations/groovy/bin/groovysh ~/.local/bin/
+----
