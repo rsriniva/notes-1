@@ -1,0 +1,15 @@
+http://valgrind.org/docs/manual/manual.html
+
+valgrind --tool=memcheck --leak-check=full --leak-resolution=high --show-leak-kinds=all --leak-check-heuristics=all --undef-value-errors=yes --track-origins=yes --keep-stacktraces=alloc-then-free ./nester-linked-list
+valgrind --tool=cachegrind ./nester-linked-list
+valgrind --tool=callgrind ./nester-linked-list
+valgrind --tool=helgrind ./nester-linked-list
+valgrind --tool=drd
+valgrind --tool=massif
+valgrind --tool=dhat
+valgrind --tool=sgccheck
+valgrind --tool=bbv
+
+https://webchat.freenode.net/?channels=%23%23mobicents&nick=iwana
+
+https://en.wikipedia.org/wiki/Elasticsearch

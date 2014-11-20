@@ -37,6 +37,7 @@ Life's Mysteries
 gem install asciidoctor
 gem install asciidoctor-diagram
 gem install asciidoctor-backends
+gem install coderay
 
 hg clone https://bitbucket.org/aucampia/blockdiag
 cd blockdiag

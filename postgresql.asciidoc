@@ -1,0 +1,16 @@
+= PostgreSQL
+
+----
+emerge --config =dev-db/postgresql-server-9.3.5
+
+psql -U postgres dbmy
+SELECT * FROM pg_catalog.pg_tables;
+\connect dbmy
+
+\list
+\dt
+
+DROP TABLE IF EXISTS
+CREATE TABLE IF NOT EXISTS
+----
+

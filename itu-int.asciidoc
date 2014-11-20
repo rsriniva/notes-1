@@ -1,0 +1,55 @@
+http://www.itu.int/en/publications/ITU-T/Pages/default.aspx
+http://www.itu.int/en/ITU-T/publications/Pages/recs.aspx
+
+
+ Individual ITU-T Recommendations
+A  Organization of the work of ITU-T
+B  Means of expression: definitions, symbols, classification
+C  General telecommunication statistics
+D  General tariff principles
+E  Overall network operation, telephone service, service operation and human factors
+F  Non-telephone telecommunication services
+G  Transmission systems and media, digital systems and networks
+H  Audiovisual and multimedia systems
+I  Integrated services digital network
+J  Cable networks and transmission of television, sound programme and other multimedia signals
+K  Protection against interference
+L  Construction, installation and protection of cables and other elements of outside plant
+M  TMN and network maintenance: international transmission systems, telephone circuits, telegraphy, facsimile and leased circuits
+
+ 
+
+N  Maintenance: international sound programme and television transmission circuits
+O  Specifications of measuring equipment
+P  Terminals and subjective and objective assessment methods
+Q  Switching and signalling
+R  Telegraph transmission
+S  Telegraph services terminal equipment
+T  Terminals for telematic services
+U  Telegraph switching
+V  Data communication over the telephone network
+X  Data networks and open system communications
+Y  Global information infrastructure and Internet protocol aspects
+Z  Languages and general software aspects for telecommunication systems
+
+
+Q.1228
+
+http://www.itu.int/rec/T-REC-A/e
+http://www.itu.int/rec/T-REC-A.2/en
+http://www.itu.int/rec/T-REC-A.2/recommendation.asp?lang=en&parent=T-REC-A.2-201211-I
+https://www.itu.int/rec/dologin.asp?lang=e&id=T-REC-T.Imp120-200508-S!!PDF-E&type=items
+
+
+https://www.itu.int/rec/dologin.asp?lang=e&id=T-REC-A.13-200712-I!Amd1!ZWD-E&type=items
+https://www.itu.int/rec/dologin.asp?lang=e&amp;id=T-REC-A.13-200712-I!Amd1!ZWD-E&amp;type=items
+
+32.276
+http://www.etsi.org/deliver/etsi_ts/132200_132299/132276/12.00.01_60/ts_132276v120001p.pdf
+
+
+http://www.qtc.jp/3GPP/Specs/23815-500.pdf
+http://www.qtc.jp/3GPP/Specs/
+
+
+

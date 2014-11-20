@@ -9,4 +9,16 @@ echo 'SELECT * FROM user\G' | mysql -u root -pussdgw mysql
 echo 'SHOW CREATE TABLE user\G' | mysql -u root -pussdgw mysql
 
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root';
+
+
+mysqladmin -u root -pussdgw variables | grep -i innodb
+echo 'SHOW VARIABLES;' | mysql -u root -pussdgw dbpcc
+echo 'SELECT * FROM USER_PRIVILEGES;' | mysql -u root -pussdgw information_schema
+
+mysqladmin -u root -pussdgw variables | grep -i innodb
+mysqladmin -u root -pussdgw variables | grep -i innodb
+echo 'SELECT * FROM tables WHERE table_schema="dbpcc";' | mysql -u root -pussdgw information_schema
+echo 'SELECT table_schema, table_name, engine FROM tables WHERE table_schema="dbpcc";' | mysql -u root -pussdgw information_schema
+
 ----
+

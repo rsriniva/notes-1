@@ -66,3 +66,8 @@ import datetime
 === Examples
 
 * link:https://github.com/lxml/lxml[ The lxml XML toolkit for Python ]
+
+----
+pip install --user csvkit
+
+----

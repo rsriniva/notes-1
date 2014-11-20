@@ -27,3 +27,7 @@ use_gpg=false
 mirror=http://mirror.concurrent.co.za/blastwave/2010-09-22/unstable
 
 ----
+
+----
+pkgchk -l -d <( gunzip -c /var/opt/csw/pkgutil/packages/mysql5-5.0.90,REV=2010.05.22-SunOS5.8-sparc-CSW.pkg.gz ) all | grep Pathname:
+----

@@ -101,3 +101,79 @@ netstat -f inet -P tcp  -an | grep 1001.
 netstat -rn
 
 traceroute 10.67.32.34
+
+
+http://docs.oracle.com/cd/E26502_01/html/E29031/lockstat-1m.html#REFMAN1Mlockstat-1m
+mpstat 1
+
+
+http://www.opencsw.org/
+https://github.com/automatthias/usable-solaris
+http://sourceforge.net/projects/gar/files/?source=navbar
+http://wiki.opencsw.org/gar-wrapper
+
+
+gfind /opt/ -mindepth 0 -maxdepth 0 -printf '%p:%u:%g:%m\n'
+
+
+----
+pstack_folder=iwana-20141114.ash-pcc.pstack.002
+pstack_pid=`pgrep -x ash-pcc`
+mkdir ~cs/${pstack_folder}/
+for i in {1..10}; do pstack `pgrep -x ash-pcc` > ~cs/${pstack_folder}/ash-pcc.`date +%Y%m%d%H%M%S`.`cat /dev/urandom | tr -d -c '[:digit:]' | dd bs=8 count=1 2>/dev/null`.pstack; done
+chown -R cs:cs ~cs/${pstack_folder}
+cat ~cs/${pstack_folder}/ash-pcc.*.pstack | ggrep -c '^-----------------  lwp#'
+cat ~cs/${pstack_folder}/ash-pcc.*.pstack | sed 's/^\s\+[a-fA-F0-9]\+\s\+\(.*\S\)\s\+(.*/\1/g' | sed '/lwp_park/d' | ggrep -A1 '^-----------------  lwp#' | sed -e '/^-----------------  lwp#/d' -e '/^--$/d' | sort | uniq -c | sort -k1n
+cat ~cs/${pstack_folder}/ash-pcc.*.pstack | gc++filt -p | sed 's/<.*>//g' | gawk 'BEGIN{ pf = "" } { if ( $0 ~ /^----------------- / ) { pf="" } else { cf = $2; if ( pf != "" ) { printf( "\"%s\" -> \"%s\"\n", cf, pf ) }; pf = cf } }' | sort | uniq -c | gawk '{ printf( "%s %s %s [ label=\"%s\" ];\n", $2, $3, $4, $1 ) }'
+----
+
+
+
+
+
+
+
+
+
+
+----
+pstack `pgrep -x ash-pcc` | view -
+
+
+prstat -c -n 9999 -m  -L -p $( pgrep -x ash-pcc ) 1 | grep -e PROCESS/LWPID -e /$( pstack $( pgrep -x ash-pcc ) | nl | sort -nr | cut -f 2- | sed -n '/_ZN10HttpServer3runEv/,/-------/p' | gsed -n 's/^.*thread# \([0-9]\+\).*$/\1/gp' )
+----
+
+
+----
+cat ~cs/${pstack_folder}/ash-pcc.*.pstack | gc++filt -p | sed 's/<.*>//g' | gawk 'BEGIN{ pf = "" } { if ( $0 ~ /^----------------- / ) { pf="" } else { cf = $2; if ( pf != "" ) { printf( "\"%s\" -> \"%s\";\n", cf, pf ) }; pf = cf } }'
+cat ~cs/${pstack_folder}/ash-pcc.*.pstack | gc++filt -p | sed 's/<.*>//g' | gawk 'BEGIN{ pf = "" } { printf( $2 ) }'
+cat ~cs/${pstack_folder}/ash-pcc.*.pstack | gc++filt -p | sed 's/<.*>//g' | gawk 'BEGIN{ pf = "" } { if ( $0 ~ /^----------------- / ) { pf="" } else { cf = $2; printf( "%s-%s-%s\n", cf, pf ); if ( pf != "" ) { printf( "\"%s\" -> \"%s\";\n", cf, pf ); pf = cf } } }'
+----
+
+
+----
+pstack_procname=ash-pcc
+pstack_folder=~cs/iwana-ash-pcc-pstack-`date +%Y%m%d%H%M%S`/
+pstack_pid=`pgrep -x ash-pcc`
+pstack_sleep=5
+pstack_count=10
+echo "${pstack_folder} ${pstack_procname} ${pstack_pid} ${pstack_sleep} ${pstack_count}"
+mkdir ${pstack_folder}
+for i in $( gawk 'BEGIN { for ( i=0; i<='"${pstack_count}"'; i++ ) { print i } }' ); do pstack `pgrep -x ash-pcc` > ${pstack_folder}/`date +%Y%m%d%H%M%S`.`cat /dev/urandom | tr -d -c '[:digit:]' | dd bs=8 count=1 2>/dev/null`.pstack; sleep ${pstack_sleep}; done
+chown -R cs:cs ${pstack_folder}
+
+(
+echo '----'
+echo "${pstack_folder} ${pstack_procname} ${pstack_pid} ${pstack_sleep} ${pstack_count}"
+cat ${pstack_folder}/*.pstack | gegrep -v '^[0-9]*:' | gc++filt -p | ggrep -c '^-----------------  lwp#'
+cat ${pstack_folder}/*.pstack | gegrep -v '^[0-9]*:' | gc++filt -p | sed 's/^\s\+[a-fA-F0-9]\+\s\+\(.*\S\)\s\+(.*/\1/g' | sed '/lwp_park/d' | ggrep -A1 '^-----------------  lwp#' | sed -e '/^-----------------  lwp#/d' -e '/^--$/d' | sort | uniq -c | sort -k1n
+echo '----'
+echo
+echo '["graphviz", format="svg"]'
+echo '----'
+echo 'digraph {'
+cat ${pstack_folder}/*.pstack | gegrep -v '^[0-9]*:' | gc++filt -p | gegrep -v '^[0-9]*:' | sed 's/<.*>//g' | gawk 'BEGIN{ pf = "" } { if ( $0 ~ /^----------------- / ) { pf="" } else { cf = $2; if ( pf != "" ) { printf( "\"%s\" -> \"%s\"\n", cf, pf ) }; pf = cf } }' | sort | uniq -c | gawk '{ printf( "%s %s %s [ label=\"%s\" ];\n", $2, $3, $4, $1 ) }'
+echo '}'
+echo '----'
+)
+----

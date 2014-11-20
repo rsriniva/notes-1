@@ -16,6 +16,11 @@ ls -ld /sys/block/sd*
 ----
 
 ----
+dmidecode -t memory
+----
+
+
+----
 
 xwininfo
 xdpyinfo
@@ -32,4 +37,41 @@ files=644
 
 ----
 dmidecode -t bios -t baseboard
+----
+
+----
+ip route add 10.252.34.0/24 via 10.252.63.100 dev ppp0 metric 1
+ip route add 10.252.34.0/24 via 10.252.63.100 dev ppp0 metric 1
+
+ip route add 172.25.0.0/16 dev tun0  scope link
+
+----
+
+----
+ltrace -o runscript.log -tt -n 2 -f /sbin/runscript /etc/init.d/apache2 describe
+ltrace -S -o ltrace.out -tt -n 2 -f ./boost-trac-10213
+----
+
+----
+init,1   
+  └─xfce4-terminal,21269
+      └─bash,543
+          └─sudo,564 su -
+              └─su,565 -
+                  └─bash,568
+                      └─runscript,1003 /etc/init.d/apache2 describe
+                          └─runscript.sh,1004 /lib64/rc/sh/runscript.sh /etc/init.d/apache2 describe
+                              └─pstree,1014 -s -p -a 1004
+
+/lib64/rc/sh/runscript.sh
+----
+
+----
+http://jnguyenx.web.cern.ch/jnguyenx/MavenNAR.html
+https://accelconf.web.cern.ch/accelconf/icalepcs2011/papers/wepks026.pdf
+----
+
+----
+gfind /opt/pcc/log/ -name 'ASH.1.0.pcc.log*' -type f -printf "%T@:%p\n" | sort -t: -k1 -n | sed "s/^[^:]\+://g"
+gfind /opt/pcc/cdr/ -type f -printf "%T@:%p\n" | sort -t: -k1 -n | tail -100 | sed "s/^[^:]\+://g" | xargs grep ...
 ----

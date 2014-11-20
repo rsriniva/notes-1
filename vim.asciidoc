@@ -4,6 +4,7 @@
 // vim: set ts=8 sw=8 :
 // vim: set filetype=asciidoc :
 # vim: filetype=make:
+// vim: set ts=8 sw=8 noexpandtab filetype=asciidoc:
 ----
 
 ----
@@ -14,4 +15,15 @@ find . -name '.*.sw?'
 <!-- vim: set ts=2 sw=2 expandtab: -->
 <!-- vim: set ts=4 sw=4 noexpandtab: -->
 
+----
+
+----
+# vim: set ts=4 sw=4 noexpandtab filetype=make:
+# vim: set ts=4 sw=4 noexpandtab filetype=sh:
+----
+
+----
+# vim: set ts=4 sw=4 noexpandtab filetype=sh:
+// vim: set ts=4 sw=4 noexpandtab filetype=java:
+# vim: set ts=4 sw=4 noexpandtab filetype=perl:
 ----

@@ -71,3 +71,71 @@ jps -l
 jinfo 17430
 rm -f heap.bin && jmap -dump:format=b,file=heap.bin 20465 && jhat heap.bin 
 ----
+
+----
+http://docs.oracle.com/javase/7/docs/technotes/guides/jar/jar.html
+----
+
+----
+http://www.oracle.com/technetwork/java/javase/terms/readme/index.html
+http://docs.oracle.com/javase/7/docs/webnotes/install/index.html
+http://docs.oracle.com/javase/7/docs/webnotes/install/solaris/solaris-jdk.html
+http://docs.oracle.com/javase/7/docs/webnotes/install/solaris/solaris-jre.html
+http://docs.oracle.com/javase/7/docs/webnotes/install/solaris/solaris-server-jre.html
+----
+
+
+----
+http://www.oracle.com/technetwork/java/javase/tech/vmoptions-jsp-140102.html
+----
+
+
+
+http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u67-oth-JPR
+http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#sjre-7u67-oth-JPR
+http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jre-7u67-oth-JPR
+
+
+----
+http://www.oracle.com/technetwork/java/javase/downloads/java-se-binaries-checksum-1956892.html
+
+MD5 Checksum
+
+jdk-7u67-linux-i586.rpm	e2dafa3d46b5d639d9681b4a5d5dc757
+jdk-7u67-linux-i586.tar.gz	715b0e8ba2a06bded75f6a92427e2701
+jdk-7u67-linux-x64.rpm	3209c90d10ca86e5c384f3aa6ad25bba
+jdk-7u67-linux-x64.tar.gz	81e3e2df33e13781e5fac5756ed90e67
+jdk-7u67-macosx-x64.dmg	10f27c5fc3d87b504fd901c0cf8f8921
+jdk-7u67-solaris-sparc.tar.Z	21dc772e6d754faf791c750c7f027ad8
+jdk-7u67-solaris-sparc.tar.gz	91f97a90885653add0a78201a7d4e6fb
+jdk-7u67-solaris-sparcv9.tar.Z	0610c4f38f04660c5d6b21e29b575056
+jdk-7u67-solaris-sparcv9.tar.gz	b433ef9b1a32cae2a0e8259acbc9a604
+jdk-7u67-solaris-x64.tar.Z	dd0a01efbd8795b30902455173b71867
+jdk-7u67-solaris-x64.tar.gz	ad80ab0fd88aac68bd3d8109a05e33fb
+jdk-7u67-solaris-i586.tar.Z	17620ab665b7910ec550df8853eab1bb
+jdk-7u67-solaris-i586.tar.gz	d981a6e2b39fc860ef4895db32eceacd
+jdk-7u67-windows-i586.exe	dbe6f185f836cd43221827eae1dfff79
+jdk-7u67-windows-x64.exe	031f3420a8f176f24c25b067fa7bcd25
+jre-7u67-linux-i586.rpm	c405accbc8b6071953af771a2b3f9da4
+jre-7u67-linux-i586.tar.gz	2a256eb2a91f0084e58c612636342c2b
+jre-7u67-linux-x64.rpm	b1bb0bd661b30bb39477d9527e26ff59
+jre-7u67-linux-x64.tar.gz	9007c79167be0177fb47e5313c53d5cb
+jre-7u67-macosx-x64.dmg	1e7d866558ecfd875bb81d77f4d92f93
+jre-7u67-macosx-x64.tar.gz	d870bf4f43aaeb3685f5acf5e2ba45c4
+jre-7u67-solaris-i586.tar.gz	90bf0cdc14e4ed5128d4af9bc64a2c90
+jre-7u67-solaris-x64.tar.gz	da83ae4793ddc2a6364d651b452f43de
+jre-7u67-solaris-sparc.tar.gz	dce77d22d5952ad32c0c69186bbcd8c7
+jre-7u67-solaris-sparcv9.tar.gz	f774dd07c3c2d70c9faeb902d8483334
+jre-7u67-windows-i586-iftw.exe	666308feaadfe8621b7a378ab9d91e27
+jre-7u67-windows-i586.exe	9da0db70cb3acbd05fdc50261a51574d
+jre-7u67-windows-i586.tar.gz	7d8297fa86b270799ab6b2b6b285495a
+jre-7u67-windows-x64.exe	5d588555b18ae9308b8990b212e7ffc7
+jre-7u67-windows-x64.tar.gz	6e8e9ad6095a42b85808ff67a1f10821
+server-jre-7u67-linux-x64.tar.gz	f6e81b9be4c1e15d59eb21e564a8973d
+server-jre-7u67-solaris-i586.tar.gz	fd645beef453d953850a7c2bfba8cb26
+server-jre-7u67-solaris-sparc.tar.gz	24a67ba44e1d447a18e499b42e826305
+server-jre-7u67-solaris-sparcv9.tar.gz	064e97324655edb210038ff6adc3f38f
+server-jre-7u67-solaris-x64.tar.gz	e050346c65ed6829b7c83b8e059cdbe1
+server-jre-7u67-windows-x64.tar.gz	2f04873045620fdba4a583cd5f1e4eaf
+
+----

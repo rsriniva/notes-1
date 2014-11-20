@@ -97,6 +97,14 @@ git reflog expire --expire=now --all
 git gc --aggressive --prune=now
 ----
 
+----
+git tag 1.0.0
+git push origin 1.0.0
+----
+
+----
+git checkout 
+----
 
 ----
 git tag -d 4.3.5

@@ -11,7 +11,8 @@ A *-right- B : composed of
 
 * `A` is composed of `B`
 * `A` has a `B`
-* `B` can exist independantly of `A`
+* `B` cannot exist independantly of `A`
+
 
 === Aggregation
 
@@ -22,7 +23,7 @@ A o-right- B : aggregation of
 
 * `A` is an aggregation of `B`
 * `A` has a `B`
-* `B` cannot exist independantly of `A`
+* `B` can exist independantly of `A`
 
 === Extention / Generalization / Specialization
 
@@ -34,6 +35,10 @@ A <|-left- B : extention of
 * `B` extends `A`
 * `B` is a specialization of `A`
 * `A` is a generalization of `B`
+
+----
+C++/Java: Inheritance
+----
 
 === Interface Implementation
 
@@ -48,3 +53,10 @@ A <|.left. B : implementation of
 * `A` is an interface of `B`
 
 usermod
+
+
+////
+http://www.agilemodeling.com/artifacts/robustnessDiagram.htm
+http://www.umlgraph.org/
+////
+

@@ -52,6 +52,9 @@ mvn help:describe -Dplugin=versions -Dfull
 mvn versions:display-plugin-updates
 mvn help:describe -Dplugin=wagon -Dfull
 mvn versions:update-child-modules
+
+mvn help:describe -Dplugin=com.github.maven-nar:nar-maven-plugin:3.2.0 -Ddetail=true 
+mvn help:describe -Dfull -Dplugin=com.googlecode.maven-download-plugin:download-maven-plugin:1.2.0
 ----
 
 ----
@@ -149,5 +152,9 @@ mvn scm:tag
 
 ----
 https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference
+----
+
+----
+http://docs.codehaus.org/display/MAVENUSER/MavenPropertiesGuide
 ----
 

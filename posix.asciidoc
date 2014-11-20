@@ -1,0 +1,26 @@
+= 
+
+== The Single UNIX® Specification - Version 2 - 1997
+
+http://pubs.opengroup.org/onlinepubs/007908799/
+
+sh(1): http://pubs.opengroup.org/onlinepubs/007908799/xcu/sh.html
+SCL Index: http://pubs.opengroup.org/onlinepubs/007908799/xcu/shellix.html
+SCL: http://pubs.opengroup.org/onlinepubs/007908799/xcu/chap2.html
+
+== IEEE Std 1003.1, 2004 Edition - 3
+
+http://pubs.opengroup.org/onlinepubs/009695399/toc.htm
+
+v2c4: sh(1): http://pubs.opengroup.org/onlinepubs/009695399/utilities/sh.html
+v2c2: SCL:  http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html
+v2c2: SCL Index: http://pubs.opengroup.org/onlinepubs/009695399/idx/shell.html
+
+==  IEEE Std 1003.1, 2013 Edition - 4
+
+Shell command language:
+ - file:///usr/share/doc/single-unix-specification-4-r1/html/utilities/V3_chap02.html#tag_18_14
+ - http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18
+ - http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html
+
+http://pubs.opengroup.org/onlinepubs/9699919799/toc.htm

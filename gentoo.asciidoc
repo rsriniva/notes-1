@@ -1,0 +1,35 @@
+
+
+----
+root@iwana-nb:~ [0] 
+# rc-service ntpd status
+init,1   
+  └─xfce4-terminal,21269
+      └─bash,3095
+          └─sudo,3113 su -
+              └─su,3116 -
+                  └─bash,3119
+                      └─ntpd,3531 /etc/init.d/ntpd status
+                          └─runscript.sh,3532 /lib64/rc/sh/runscript.sh /etc/init.d/ntpd status
+                              └─pstree,3540 -s -p -a 3532
+UID        PID  PPID  C STIME TTY          TIME CMD
+root      3532  3531  0 22:38 pts/41   00:00:00 /bin/sh /lib64/rc/sh/runscript.sh /etc/init.d/ntpd status
+ * status: started
+
+----
+
+----
+eix -J ## see what is installed from overlays
+----
+
+
+http://www.commandlinefu.com/commands/view/11027/enable-all-bash-completions-in-gentoo
+
+
+eselect bashcomp list --global
+eselect bashcomp list --global
+
+eselect bashcomp list | sed -n 's/^.*\[\([^]]\+\)\].*$/\1/gp' | xargs -n1 -t eselect bashcomp disable
+
+eselect bashcomp list --global | sed -n 's/^.*\[\([^]]\+\)\].*$/\1/gp' | xargs -n1 -t eselect bashcomp disable --global
+eselect bashcomp list --user | sed -n 's/^.*\[\([^]]\+\)\].*$/\1/gp' | xargs -n1 -t eselect bashcomp disable --user

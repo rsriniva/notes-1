@@ -1,0 +1,45 @@
+
+
+----
+iwana@x86-64-sunos-solaris-510u9-vm:~ [0] 
+$ cat /etc/release 
+                    Oracle Solaris 10 9/10 s10x_u9wos_14a X86
+     Copyright (c) 2010, Oracle and/or its affiliates. All rights reserved.
+                            Assembled 11 August 2010
+iwana@x86-64-sunos-solaris-510u9-vm:~ [0] 
+$ uname -a
+SunOS x86-64-sunos-solaris-510u9-vm 5.10 Generic_142910-17 i86pc i386 i86pc
+iwana@x86-64-sunos-solaris-510u9-vm:~ [0] 
+$ /bin/bash -c 'echo ${BASH_VERSINFO[@]}'
+3 00 16 1 release i386-pc-solaris2.10
+----
+
+
+----
+iwana@devsol9:~$ cat /etc/release 
+                      Solaris 9 9/05 HW s9s_u9wos_06b SPARC
+           Copyright 2006 Sun Microsystems, Inc.  All Rights Reserved.
+                        Use is subject to license terms.
+                           Assembled 25 September 2006
+iwana@devsol9:~$ uname -a
+SunOS devsol9 5.9 Generic_Virtual sun4v sparc SUNW,Netra-T2000
+iwana@devsol9:~$ 
+iwana@devsol9:~$ /bin/bash -c 'echo ${BASH_VERSINFO[@]}'
+2 05 0 1 release sparc-sun-solaris2.9
+----
+
+----
+iwana@iwana-nb.concurrent.co.za:~
+$ bash-2.05 -c 'echo ${BASH_VERSINFO[@]}'
+2 05 0 1 release x86_64-pc-linux-gnu
+iwana@iwana-nb.concurrent.co.za:~
+$ bash-3.0 -c 'echo ${BASH_VERSINFO[@]}'
+3 00 16 1 release x86_64-pc-linux-gnu
+----
+
+----
+PS1="bash-${BASH_VERSION}:~ \$ "
+----
+
+
+find "${HOME}" -mindepth 1 -maxdepth 1 -name '.bash_history*' -type f -printf "%T@:%p\n" | sort -t: -k1 -n | sed "s/^[^:]\+://g" | xargs grep --color exiftool

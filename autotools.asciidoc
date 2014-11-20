@@ -29,3 +29,5 @@ http://ac-archive.sourceforge.net/
 ----
 http://lists.gnu.org/archive/html/automake/2008-06/msg00103.html
 ----
+
+http://www.edwardrosten.com/code/autoconf/
