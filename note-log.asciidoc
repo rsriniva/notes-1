@@ -1,0 +1,1 @@
+(echo ".ll 17.1i"; echo ".nr LL 17.1i"; echo ".pl 1100i"; cat doc/gawk.1; echo ".\\\""; echo ".pl \n(nlu+10") | /usr/bin/gtbl | /usr/bin/nroff -mandoc | less -isR
