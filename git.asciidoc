@@ -119,3 +119,7 @@ git revert 137456d80099247aad1e10007ba3b9bad65f5241
 ----
 git difftool --tool=vimdiff --no-prompt
 ----
+
+----
+<KevinMGranger> CustosLimen: if you want to keep all of your configuration and remotes and everything, you can find the SHA of the initial commit and do a git reset --soft SHA && git commit --amend
+----

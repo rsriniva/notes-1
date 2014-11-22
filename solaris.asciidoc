@@ -153,13 +153,13 @@ cat ~cs/${pstack_folder}/ash-pcc.*.pstack | gc++filt -p | sed 's/<.*>//g' | gawk
 
 ----
 pstack_procname=ash-pcc
-pstack_folder=~cs/iwana-ash-pcc-pstack-`date +%Y%m%d%H%M%S`/
-pstack_pid=`pgrep -x ash-pcc`
+pstack_folder=~cs/iwana-${pstack_procname}-pstack-`date +%Y%m%d%H%M%S`/
+pstack_pid=`pgrep -x ${pstack_procname}`
 pstack_sleep=5
 pstack_count=10
 echo "${pstack_folder} ${pstack_procname} ${pstack_pid} ${pstack_sleep} ${pstack_count}"
 mkdir ${pstack_folder}
-for i in $( gawk 'BEGIN { for ( i=0; i<='"${pstack_count}"'; i++ ) { print i } }' ); do pstack `pgrep -x ash-pcc` > ${pstack_folder}/`date +%Y%m%d%H%M%S`.`cat /dev/urandom | tr -d -c '[:digit:]' | dd bs=8 count=1 2>/dev/null`.pstack; sleep ${pstack_sleep}; done
+for i in $( gawk 'BEGIN { for ( i=0; i<='"${pstack_count}"'; i++ ) { print i } }' ); do pstack `pgrep -x ${pstack_procname}` > ${pstack_folder}/`date +%Y%m%d%H%M%S`.`cat /dev/urandom | tr -d -c '[:digit:]' | dd bs=8 count=1 2>/dev/null`.pstack; sleep ${pstack_sleep}; done
 chown -R cs:cs ${pstack_folder}
 
 (

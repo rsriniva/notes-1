@@ -139,3 +139,29 @@ server-jre-7u67-solaris-x64.tar.gz	e050346c65ed6829b7c83b8e059cdbe1
 server-jre-7u67-windows-x64.tar.gz	2f04873045620fdba4a583cd5f1e4eaf
 
 ----
+
+----
+Command Line Arguments:
+
+https://stackoverflow.com/questions/3309250/command-line-parsing-commons-cli-alternatives
+https://stackoverflow.com/questions/367706/is-there-a-good-command-line-argument-parser-for-java
+https://stackoverflow.com/questions/7739214/command-line-parser-and-lack-of-subcommand-and-grouping
+http://furiouspurpose.blogspot.com/2008/07/command-line-parsing-libraries-for-java.html
+
+
+http://java-source.net/open-source/command-line
+
+https://commons.apache.org/proper/commons-cli/
+
+http://sourceforge.net/projects/jcmdline/
+
+https://pholser.github.io/jopt-simple/
+
+http://jcommander.org/
+
+http://argparse4j.sourceforge.net/
+
+https://github.com/dr1fter/cli-parsec
+
+https://github.com/ryenus/rop
+----
