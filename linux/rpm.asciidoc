@@ -1,0 +1,1 @@
+rpm --query --file `which systemctl`

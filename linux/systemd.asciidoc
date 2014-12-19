@@ -1,0 +1,6 @@
+
+
+systemctl --no-pager list-unit-files
+systemctl --no-pager --all
+
+

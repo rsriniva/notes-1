@@ -1,0 +1,6 @@
+/dev/sdd1
+
+mkdosfs -v -F 32 -n '000.fd.iwana' /dev/sdd1
+
+
+http://wiki.centos.org/

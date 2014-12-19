@@ -1,0 +1,13 @@
+https://cxf.apache.org/docs/jaxrs-services-configuration.html
+https://cxf.apache.org/docs/jax-rs.html
+https://cxf.apache.org/docs/jax-rs-basics.html
+https://cxf.apache.org/docs/jax-rs-and-jax-ws.html
+https://cxf.apache.org/docs/jax-rs-data-bindings.html
+https://cxf.apache.org/docs/jax-rs-advanced-features.html
+https://cxf.apache.org/docs/jax-rs-filters.html
+
+https://cxf.apache.org/schemas/
+
+        http://cxf.apache.org/blueprint/core http://cxf.apache.org/schemas/blueprint/core.xsd
+        http://cxf.apache.org/blueprint/jaxws http://cxf.apache.org/schemas/blueprint/jaxws.xsd
+        http://cxf.apache.org/blueprint/jaxrs http://cxf.apache.org/schemas/blueprint/jaxrs.xsd

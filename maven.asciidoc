@@ -6,9 +6,13 @@
 ----
 mvn help:describe -Dplugin=dependency -Dfull
 mvn help:describe -Dplugin=maven-dependency-plugin -Dfull
+mvn help:describe -Dplugin=org.apache.maven.plugins:maven-dependency-plugin -Dfull
 mvn help:describe -Dplugin=org.apache.maven.plugins:maven-dependency-plugin:2.8 -Dfull
 mvn help:describe -Dplugin=compiler 
 mvn help:describe -Dcmd=compile -Dfull
+
+mvn help:describe -Dplugin=org.codehaus.mojo:exec-maven-plugin -Dfull
+
 ----
 
 * Dependency Tree ...
@@ -16,6 +20,8 @@ mvn help:describe -Dcmd=compile -Dfull
 ----
 mvn dependency:tree
 mvn org.apache.maven.plugins:maven-dependency-plugin:2.8:tree
+mvn org.apache.maven.plugins:maven-dependency-plugin:tree
+mvn org.apache.maven.plugins:maven-dependency-plugin:resolve-plugins
 ----
 
 * Built In Plugins ...
@@ -67,7 +73,7 @@ https://maven.apache.org/guides/mini/guide-encryption.html
 ----
 
 ----
-
+-Dmaven.test.skip=true or -DskipTests=true
 ----
 
 ----

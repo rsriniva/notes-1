@@ -42,6 +42,17 @@ next
 print httpConfiguration.all
 print this.getHttpConfiguration()
 print this.authenticationInfo.getPassword()
+
+
+java -agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=y -XX:MaxPermSize=256M -Xmx1024M -DfileMap=/home/iwana/projects/gitlab/cs-csa/user-api/spec-1.2/api-docs -cp "`mop classpath org.scala-lang:scala-compiler:2.11.1`" scala.tools.nsc.MainGenericRunner -cp "`mop classpath com.wordnik:swagger-codegen_2.11.1:2.0.17`" JaxRsCodegen.scala http://petstore.swagger.wordnik.com/api/api-docs special-key
+
+jdb -attach 8000
+
+stop at com.wordnik.swagger.codegen.Codegen.compileTemplate:59
+stop at Codegen.scala:60
+stop in com.wordnik.swagger.codegen.Codegen.compileTemplate
+stop in org.fusesource.scalate.TemplateEngine.compile
+stop in org.fusesource.scalate.support.DefaultTemplatePackage.header
 ----
 
 

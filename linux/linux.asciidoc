@@ -25,6 +25,15 @@ dmidecode -t memory
 xwininfo
 xdpyinfo
 lsscsi
+
+xprop
+
+pstree -a -p 22807
+----
+
+----
+lsof -i
+while true; do  lsof  -i  | grep chrome; done > chrome.connections.log
 ----
 
 ----
@@ -74,4 +83,26 @@ https://accelconf.web.cern.ch/accelconf/icalepcs2011/papers/wepks026.pdf
 ----
 gfind /opt/pcc/log/ -name 'ASH.1.0.pcc.log*' -type f -printf "%T@:%p\n" | sort -t: -k1 -n | sed "s/^[^:]\+://g"
 gfind /opt/pcc/cdr/ -type f -printf "%T@:%p\n" | sort -t: -k1 -n | tail -100 | sed "s/^[^:]\+://g" | xargs grep ...
+----
+
+----
+sox -t pulseaudio default ~/incoming/recording-`date +%Y%m%d-%H%M%S`.mp3
+----
+
+----
+ethtool
+blockdev --getbsz /dev/sda1 
+----
+
+
+----
+root=10.16.105.196:/nfs/nfs_root cio_ignore=all,!condev
+rd.znet=qeth,0.0.0a00,0.0.0a01,0.0.0a02,layer2=1,portno=0,portname=OSAPORT
+ip=10.16.105.197:10.16.105.196:10.16.111.254:255.255.248.0:nfs‐server.subdomain.domain:enccw0.0.09a0:none rd_NO_LUKS rd_NO_LVM rd_NO_MD rd_NO_DM
+LANG=en_US.UTF-8 SYSFONT=latarcyrheb-sun16 KEYTABLE=us
+----
+
+----
+partprobe
+
 ----
